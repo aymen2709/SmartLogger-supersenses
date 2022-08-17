@@ -1,21 +1,15 @@
 import React from "react";
 import description_img from '../images/description_img.png';
 import Button from 'react-bootstrap/Button';
-import Row from 'react-bootstrap/Row';
-import Col from 'react-bootstrap/Col';
 import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
-import logo_supersenses from '../images/logo_supersenses.png';
 import NosValeur from "../NosValeur";
 import { LinkContainer } from "react-router-bootstrap";
-import language from '../images/language.png';
-import Dropdown from 'react-bootstrap/Dropdown';
-import ButtonGroup from 'react-bootstrap/ButtonGroup';
-import { HashLink } from 'react-router-hash-link';
 import fontawesome from '@fortawesome/fontawesome'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faCheckSquare, faCoffee } from '@fortawesome/fontawesome-free-solid'
+import { faCheckSquare, faCoffee } from '@fortawesome/fontawesome-free-solid';
+import NavDropdown from 'react-bootstrap/NavDropdown';
 
 function HomeInterface() {
 
@@ -27,77 +21,47 @@ function HomeInterface() {
       <Navbar bg="transparent" expand="lg" id="navbarTestIcons">
         <Container>
           <Navbar.Brand href="/">
-            {/* <img src={logo_supersenses} alt="logo_supersenses" className="logo_supersenses" /> */}
             <div className="bgTestImg"></div>
           </Navbar.Brand>
           <Navbar.Toggle aria-controls="basic-navbar-nav" >
-            <span>
-              <FontAwesomeIcon
-                icon="bars" color="white" size="10px" />
-            </span>
+            <span> <FontAwesomeIcon icon="bars" color="white" size="lg" /> </span>
           </Navbar.Toggle>
           <Navbar.Collapse id="basic-navbar-nav">
-
-            <Nav className="me-auto" id="HomeNav">
-              <LinkContainer to="/"><Nav.Link className='Nav_home' id='NavText_home'><h6>Acceuil</h6></Nav.Link></LinkContainer>
-              <Nav.Link className='Nav_home' id='NavText_home'>
-                <div className="btnNosSolutionHome">
-                  <Dropdown as={ButtonGroup} id="dropdown_Solution">
-                    {/* <Button href="/#boxs" variant="transparent" id='NavText_home'>NOS SOLUTIONS</Button> */}
-                    <Button variant='transparent'>
-                      <HashLink className="hashLinkNavBar" smooth to="/#boxs"><h6>NOS SOLUTIONS</h6></HashLink>
-                    </Button>
-                    <Dropdown.Toggle split variant="transparent" size="sm" id="dropdown-split-basic" />
-                    <Dropdown.Menu size="sm">
-                      <Dropdown.Item href="/Hodhod">
-                        <HashLink className="hashLinkNavBarDropDown" to="/Hodhod"><h6>Hodhod</h6></HashLink>
-                      </Dropdown.Item>
-                      <Dropdown.Item href="/SensesIA">
-                        <HashLink className="hashLinkNavBarDropDown" to="/SensesIA"><h6>SensesIA</h6></HashLink>
-                      </Dropdown.Item>
-                    </Dropdown.Menu>
-                  </Dropdown>
-                </div>
+            <Nav className="ms-auto" id="HomeNav">
+              <Nav.Link className='Nav_home' id='NavText_home' href="/">Acceuil</Nav.Link>
+              <NavDropdown title="Nos Solutions" id="dropdown_Solution">
+                <NavDropdown.Item href="/Hodhod">Hodhod</NavDropdown.Item>
+                <NavDropdown.Item href="/SensesIA">SensesIA</NavDropdown.Item>
+              </NavDropdown>
+              <Nav.Link href="/NosExpertises" className='Nav_home' id='NavText_home'>
+                Notre expertise
               </Nav.Link>
-              <LinkContainer to="/NosExpertises"><Nav.Link className='Nav_home' id='NavText_home'><h6>Notre expertise</h6></Nav.Link></LinkContainer>
-              <LinkContainer to="/Apropos"><Nav.Link className='Nav_item' id='NavText_home'><h6>A propos</h6></Nav.Link></LinkContainer>
-              {/* <Nav.Link id='selectLangue'>
-                <Dropdown>
-                  <Dropdown.Toggle variant="transparent" id="dropdown-basic" to="/Nos solutions" className='Nav_item'>
-                    <div className='dpSolution'><img src={language} id="languageIcon" />Langue</div>
-                  </Dropdown.Toggle>
-
-                  <Dropdown.Menu>
-                    <Dropdown.Item href="#/action-1">Francais</Dropdown.Item>
-                    <Dropdown.Item href="#/action-2">Arabe</Dropdown.Item>
-
-                  </Dropdown.Menu>
-                </Dropdown>
-              </Nav.Link> */}
-
+              <Nav.Link href="/Apropos" className='Nav_home' id='NavText_home'>
+                A propos
+              </Nav.Link>
             </Nav>
           </Navbar.Collapse>
         </Container>
       </Navbar>
+      
       <div className="Description_supersenses">
-        <Container>
-          <Row>
-            <Col>
-              <h2>Bienvenue à</h2>
+        <div className="container">
+          <div className="row">
+            <div className="col-md-6 align-self-center">
+            <h2>Bienvenue à</h2>
               <h1>Super Senses</h1>
               <p>Super Senses est une startup Tunisienne dévoilée par une équipe d’ingénieurs
                 multidisciplinaires. Notre vision est de crée un outil technologique d’aide à la
                 décision capable d’ajouter un 6ieme sens utilisant l’intelligence artificielle.</p>
               <LinkContainer to="/Apropos"><Button variant="outline-dark">Lire tout</Button></LinkContainer>
-            </Col>
-            <Col>
-              <div id="description_img">
-                <img src={description_img} alt="description_img" className="description_img" />
+            </div>
+            <div className="col-md-6 align-self-center">
+            <div id="description_img">
+                <img src={description_img} alt="description_img" className="img-responsive" style={{width: '100%', maxWidth: '471px'}}/>
               </div>
-            </Col>
-          </Row>
-        </Container>
-
+            </div>
+          </div>
+        </div>
         <NosValeur />
       </div>
 

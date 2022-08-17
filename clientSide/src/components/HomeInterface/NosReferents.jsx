@@ -10,6 +10,7 @@ import novationCity from './images/novationCity.png';
 
 
 
+// eslint-disable-next-line no-lone-blocks
 {/*import logo_twitter from './images/logo_twitter.png';*/}
 
 function NosReferents(props) {
@@ -25,8 +26,8 @@ function NosReferents(props) {
       </Container>
       
       <div class="d-flex justify-content-center">
-        <img src={smartLogger} className="ref-img"/>
-        <img src={novationCity} className="ref-img"/>
+        <img src={smartLogger} className="ref-img" alt=''/>
+        <img src={novationCity} className="ref-img" alt=''/>
       </div>
     
     </div>

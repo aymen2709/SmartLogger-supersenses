@@ -19,14 +19,14 @@ const NosValeur = () => {
 
   return (
     <div className="part2">
-      <div class="container">
-        <div class="row">
-          <h1 class="text-center" id="title1">Nos valeurs & Engagements</h1>
+      <div className="container">
+        <div className="row">
+          <h1 className="text-center" id="title1">Nos valeurs & Engagements</h1>
         </div>
-        <div class="row">
-          <h2 class="text-center text-sm-left" id="title2">Notre clé de réussite</h2>
+        <div className="row">
+          <h2 className="text-center text-sm-left" id="title2">Notre clé de réussite</h2>
         </div>
-        <div class="col">
+        <div className="col">
         </div>
       </div>
       <div className="p1">
@@ -36,29 +36,29 @@ const NosValeur = () => {
           Nous sommes engagés de digitaliser notre quotidien pour un avenir meilleur.</p>
       </div>
       <div className="images text-center">
-        <div class="container text-center">
-          <div class="row">
-            <div class="col" >
-              <div class="contenuS text-center">
-                <img src={img1} alt="Avatar" class="image" />
-                <div class="middle">
-                  <div class="text">Engagements</div>
+        <div className="container text-center">
+          <div className="row">
+            <div className="col" >
+              <div className="contenuS text-center">
+                <img src={img1} alt="Avatar" className="image" />
+                <div className="middle">
+                  <div className="text">Engagements</div>
                 </div>
               </div>
             </div>
-            <div class="col" >
-              <div class="contenuS text-center">
-                <img src={img3} alt="Avatar" class="image" />
-                <div class="middle">
-                  <div class="text">Savoir-Faire</div>
+            <div className="col" >
+              <div className="contenuS text-center">
+                <img src={img3} alt="Avatar" className="image" />
+                <div className="middle">
+                  <div className="text">Savoir-Faire</div>
                 </div>
               </div>
             </div>
-            <div class="col">
-              <div class="contenuS text-center">
-                <img src={img2} alt="Avatar" class="image" />
-                <div class="middle">
-                  <div class="text">Expertise </div>
+            <div className="col">
+              <div className="contenuS text-center">
+                <img src={img2} alt="Avatar" className="image" />
+                <div className="middle">
+                  <div className="text">Expertise </div>
                 </div>
               </div>
             </div>
@@ -67,13 +67,13 @@ const NosValeur = () => {
       </div>
 
       <div className="solution">
-        <div class="container">
-          <div class="col">
-            <div class="row">
-              <h1 class="text-center" id="title1">Nos Solutions</h1>
+        <div className="container">
+          <div className="col">
+            <div className="row">
+              <h1 className="text-center" id="title1">Nos Solutions</h1>
             </div>
-            <div class="row">
-              <h2 class="text-center text-sm-left" id="title2">Découvrir les solutions techniques</h2>
+            <div className="row">
+              <h2 className="text-center text-sm-left" id="title2">Découvrir les solutions techniques</h2>
             </div>
 
           </div>
@@ -93,19 +93,19 @@ const NosValeur = () => {
 
       {/* 
       <div className="container" id="boxs">
-        <div class="row">
-          <div class="col">
+        <div className="row">
+          <div className="col">
             <img className="bgSolution img-thumbnail shadow rounded" src={img1Solution} alt="img1" id="img3Solution" />
             <div className="box">
               <p>
-                <div class="col">
+                <div className="col">
                   <div className='row'>
                     <img src={img2Solution} alt="hodhod" id="chatSize" />
                   </div>
-                  <div class="row">
+                  <div className="row">
 
-                    <Link to="/Hodhod" id="LinkHome"><h1 class="text-center" id="hodhodTitle">HODHOD</h1></Link>
-                    <div class="row text-center" id="hodhodparagraph" >
+                    <Link to="/Hodhod" id="LinkHome"><h1 className="text-center" id="hodhodTitle">HODHOD</h1></Link>
+                    <div className="row text-center" id="hodhodparagraph" >
 
                       <p>Une application mobile pour<br></br> la municipalité et les citoyens.</p>
                     </div>
@@ -131,17 +131,17 @@ const NosValeur = () => {
         <div className='expertiseBox'>
           <ul>
             <li><h1 id="expertiseBoxItems">Notre Expertise</h1></li>
-            <li><h5 id="expertiseBoxItems"><i class="bi bi-check-circle-fill"></i>&nbsp;&nbsp;Machine Learning</h5></li>
-            <li><h5 id="expertiseBoxItems"><i class="bi bi-check-circle-fill"></i>&nbsp;&nbsp;Internet des Objets</h5></li>
-            <li><h5 id="expertiseBoxItems"><i class="bi bi-check-circle-fill"></i>&nbsp;&nbsp;Intelligence Artificielle</h5></li>
-            <li><h5 id="expertiseBoxItems"><i class="bi bi-check-circle-fill"></i>&nbsp;&nbsp;Formation technologique</h5></li>
-            <li><h5 id="expertiseBoxItems"><i class="bi bi-check-circle-fill"></i>&nbsp;&nbsp;Développement web/mobile</h5></li>
-            <li><h5 id="expertiseBoxItems"><i class="bi bi-check-circle-fill"></i>&nbsp;Conception et layout des cartes électroniques</h5></li>
+            <li><h5 id="expertiseBoxItems"><i className="bi bi-check-circle-fill"></i>&nbsp;&nbsp;Machine Learning</h5></li>
+            <li><h5 id="expertiseBoxItems"><i className="bi bi-check-circle-fill"></i>&nbsp;&nbsp;Internet des Objets</h5></li>
+            <li><h5 id="expertiseBoxItems"><i className="bi bi-check-circle-fill"></i>&nbsp;&nbsp;Intelligence Artificielle</h5></li>
+            <li><h5 id="expertiseBoxItems"><i className="bi bi-check-circle-fill"></i>&nbsp;&nbsp;Formation technologique</h5></li>
+            <li><h5 id="expertiseBoxItems"><i className="bi bi-check-circle-fill"></i>&nbsp;&nbsp;Développement web/mobile</h5></li>
+            <li><h5 id="expertiseBoxItems"><i className="bi bi-check-circle-fill"></i>&nbsp;Conception et layout des cartes électroniques</h5></li>
           </ul>
         </div>
       </div>
       <br></br><br></br><br></br><br></br>
-      {/* <div class="row text-center" id="portfolioBox"> */}
+      {/* <div className="row text-center" id="portfolioBox"> */}
       <div className='container'>
         <div className='row'  >
           <h1 className='text-center'>Portfolio </h1>
