@@ -28,7 +28,7 @@ function HomeInterface() {
           </Navbar.Toggle>
           <Navbar.Collapse id="basic-navbar-nav">
             <Nav className="ms-auto" id="HomeNav">
-              <Nav.Link className='Nav_home' id='NavText_home' href="/">Acceuil</Nav.Link>
+              <Nav.Link className='Nav_home' id='NavText_home' href="/">Accueil</Nav.Link>
               <NavDropdown title="Nos Solutions" id="dropdown_Solution">
                 <NavDropdown.Item href="/Hodhod">Hodhod</NavDropdown.Item>
                 <NavDropdown.Item href="/SensesIA">SensesIA</NavDropdown.Item>
@@ -43,21 +43,22 @@ function HomeInterface() {
           </Navbar.Collapse>
         </Container>
       </Navbar>
-      
+
       <div className="Description_supersenses">
         <div className="container">
           <div className="row">
             <div className="col-md-6 align-self-center">
-            <h2>Bienvenue à</h2>
-              <h1>Super Senses</h1>
-              <p>Super Senses est une startup Tunisienne dévoilée par une équipe d’ingénieurs
+              <div className="bienvenuto">Bienvenue à</div>
+              <div className="big-title">Super Senses</div>
+              <p className="bienvenuto-p">Super Senses est une startup Tunisienne dévoilée par une équipe d’ingénieurs
                 multidisciplinaires. Notre vision est de crée un outil technologique d’aide à la
                 décision capable d’ajouter un 6ieme sens utilisant l’intelligence artificielle.</p>
-              <LinkContainer to="/Apropos"><Button variant="outline-dark">Lire tout</Button></LinkContainer>
+              <LinkContainer to="/Apropos"><Button className="more-info-btn" variant="outline-dark">Lire tout</Button></LinkContainer>
             </div>
             <div className="col-md-6 align-self-center">
-            <div id="description_img">
-                <img src={description_img} alt="description_img" className="img-responsive" style={{width: '100%', maxWidth: '471px'}}/>
+              <div id="description_img">
+                <img src={description_img} alt="description_img" className="img-responsive"
+                  style={{ width: '100%', maxWidth: '471px' }} />
               </div>
             </div>
           </div>

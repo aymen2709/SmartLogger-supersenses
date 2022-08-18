@@ -1,18 +1,11 @@
-
-
 @font-face {
   font-family: "CaviarDreams";
   src: local("CaviarDreams"),
     url("./fonts/CaviarDreams_Bold.ttf") format("truetype");
   font-weight: bold;
 }
-/* Media Queries */
-@media screen and (min-width:980px) and (max-width:1098px){
-  .images{
-    margin-left: 380px !important;
-  }
-}
 
+/* Media Queries */
 /****** navbar ****/
 @media only screen and (max-width:971px) {
   .btnNosSolution {
@@ -47,17 +40,6 @@
     margin-left: 25px !important;
   }
 
-  .middle {
-    transition: .5s ease;
-    opacity: 0;
-    position: absolute;
-    top: 78% !important;
-    left: 100px;
-    transform: translate(-50%, -50%);
-    -ms-transform: translate(-50%, -50%);
-    text-align: center;
-  }
-
   .Apropos {
     margin-top: 6% !important;
   }
@@ -81,36 +63,17 @@
     width: 990px !important;
   }
 
-  .expertisets {
-    background-image: url('./components/images/Bg_expertise.jpg');
-    width: 100% !important;
-    margin-left: 0% !important;
-    background-repeat: no-repeat;
-    background-size: 100% 90%;
-    height: 487px;
-    padding-top: 8%;
-  }
-  .expertiseBox {
-    background-color: rgba(255, 255, 255, 0.3);
-    box-shadow: 0px 3px 6px #888992;
-    border-radius: 21px;
-    opacity: 1;
-    backdrop-filter: blur(7px);
-    width: 400px !important;
-    height: 250px !important;
-    margin-left: -83% !important;
-    padding-top: 2.5%;
-    line-height: 3em;
-  }
-
   #navfooter {
     background-image: url('../src/components/images/bg_img_footer1_1_1510x400.png');
     background-repeat: no-repeat;
-    width: 98% !important;
-    height: 400px;
-    margin-left: 0%;
-    margin-top: 6%;
+    background-size: cover;
   }
+
+  .logo-footer {
+    width: 100%;
+    max-width: 170px;
+  }
+
 
   .image {
     opacity: 1;
@@ -119,25 +82,6 @@
     backface-visibility: hidden;
     width: 280px !important;
     height: 267px;
-  }
-
-  .contenuS:hover .image {
-    transform: scale(1.3);
-    z-index: 2;
-    width: 280px !important;
-    height: 267px !important;
-  }
-  .text {
-    background-color: gray;
-    opacity: 0.9;
-    color: white;
-    font-size: 25px;
-    width: 346px !important;
-    height: 81px;
-    margin-left: 11.5% !important;
-    margin-top: 26% !important;
-    padding-top: 4%;
-    border-radius: 0px 0px 25px 25px;
   }
 
   #img3Solution {
@@ -168,28 +112,34 @@
     margin-top: -20%;
     margin-left: 7%;
   }
+
   #findOn {
     margin-left: 2% !important;
     font-size: 15px !important;
     margin-top: 38% !important;
   }
+
   .fb_logo {
     margin-left: -3% !important;
     margin-top: 35% !important;
   }
+
   .insta_logo {
     margin-left: -160% !important;
     margin-top: 35% !important;
   }
+
   .linkedin_logo {
     margin-left: -80% !important;
     margin-top: 35% !important;
   }
+
   #logo_sup {
     margin-left: 35%;
     margin-top: 38% !important;
   }
 }
+
 /****** for screen between 980 and 1099 *******/
 @media only screen and (min-width: 980px) and (max-width:1099px) {
   .logo_supersenses {
@@ -198,17 +148,21 @@
     margin-left: 15px !important;
     margin-right: 5px;
   }
+
   #portfolioBox {
     width: 800px !important;
     margin-left: 10px !important;
   }
+
   #portfolio1 {
     width: 100%;
   }
+
   #img3Solution {
     width: 60% !important;
     height: 200px !important;
   }
+
   .img3Box {
     background-color: rgba(255, 255, 255, 0.3);
     box-shadow: 0px 3px 6px #888992;
@@ -220,6 +174,7 @@
     margin-top: -20%;
     margin-left: 6.25%;
   }
+
   .box {
     background-color: rgba(255, 255, 255, 0.3);
     box-shadow: 0px 3px 6px #888992;
@@ -231,11 +186,13 @@
     margin-top: -20%;
     margin-left: 5% !important;
   }
+
   #boxs {
     margin-top: 6%;
     margin-left: 50px !important;
     width: 990px !important;
   }
+
   #hodhodparagraph {
     font-size: 14px !important;
     text-align: center;
@@ -246,6 +203,7 @@
     color: #000;
     padding-left: 15%;
   }
+
   #SensiaP {
     font-size: 14px !important;
     text-align: center;
@@ -255,117 +213,66 @@
     line-height: 22px;
     color: #000;
   }
-  .images {
-    padding-top: 5%;
-    margin-left: 60px;
-    width: 30% !important;
-  }
 }
+
 /*********** mobile screen between 425px and 768px**************************/
 @media only screen and (min-width:425px) and (max-width:767px) {
+
   /** footer **/
   #socialIcons {
     margin-left: 10% !important;
     margin-top: -13% !important;
   }
+
   #copyright_title {
     margin-left: -65% !important;
   }
+
   #navfooter {
     padding-top: 15% !important;
   }
+
   /*=============*/
   /* Homeinterface*/
-  .contenuS .image {
-    transform: scale(1.3);
-    z-index: 2;
-    width: 240px !important;
-    height: 210px !important;
-    margin: 30px !important;
-    margin-left: -55px !important;
-  }
-  .text {
-    background-color: gray;
-    opacity: 1;
-    color: white;
-    font-size: 10px;
-    width: 298px !important;
-    height: 81px;
-    margin-left: -69px !important;
-    margin-top: 43px !important;
-    padding-top: 4%;
-    border-radius: 0px 0px 25px 25px;
-  }
-  .middle {
-    opacity: 1 !important;
-    position: absolute;
-    top: 81%;
-    left: 100px;
-    text-align: center;
-  }
-  .image {
-    opacity: 1;
-    display: block;
-    transition: .5s ease;
-    width: 120px !important;
-    height: 270px !important;
-  }
-  .contenuS {
-    position: relative;
-    width: 50%;
-    margin-left: 20% !important;
-  }
-  #hodhod1 {
-    width: 340px !important;
-    height: 250px !important;
-    margin-left: -20px !important;
-    margin-top: 70px !important; 
-  }
-  .expertiseBox {
-    background-color: rgba(255, 255, 255, 0.3);
-    box-shadow: 0px 3px 6px #888992;
-    border-radius: 21px;
-    opacity: 1;
-    backdrop-filter: blur(7px);
-    width: 450px !important;
-    height: 280px !important;
-    margin-left: 80px !important;
-    padding-top: 2.5%;
-    line-height: 3em;
-  }
-  #expertiseBoxItems {
-    font-size: 16px !important;
-  }
+
   #portfolio1 {
     width: 250px !important;
     margin-left: 25px !important;
   }
+
   /*================*/
   /**Hodhod Interface **/
-  #HodhodContentParagraph{
+  #HodhodContentParagraph {
     margin-top: -300px !important;
   }
+
   #bgPsize {
     border-radius: 25px;
     margin-top: 20px !important;
   }
-  #compBorder1{
+
+  #compBorder1 {
     margin-bottom: 50px !important;
   }
-  #compBorder2{
+
+  #compBorder2 {
     margin-bottom: 50px !important;
   }
+
   #videoPicture {
     width: 485px !important;
   }
+
   #hodhodbox {
     margin-left: 4% !important;
     margin-top: 4%;
     width: 80% !important;
   }
+
   #mobPicture {
     width: 280px !important;
   }
+
   #hodhodImage {
     width: 120px !important;
     height: 80px !important;
@@ -373,6 +280,7 @@
     margin-left: 35% !important;
     border-radius: 20px;
   }
+
   .bgSolutionImg {
     background-image: url('./components/images/bannière supersenses@2x.png');
     background-repeat: no-repeat;
@@ -380,11 +288,13 @@
     height: 487px;
     margin-top: 80px !important;
   }
+
   #googlePlay {
     width: 100px !important;
     height: 100%;
     margin-left: 35% !important;
   }
+
   /*======================*/
   /**** Senses IA Interface***/
   #img-descriptionSensesIA {
@@ -392,26 +302,31 @@
     height: 90% !important;
     margin-left: 40px !important;
   }
+
   #blocComposantsSensesIA {
     margin-top: 5%;
     text-align: center;
     width: 350px !important;
     margin-left: 20px !important;
   }
+
   .img_service_AI {
     margin-left: 10%;
     border-radius: 30px;
     width: 350px !important;
   }
+
   .img_service_digital {
     margin-top: 20px;
     width: 350px !important;
   }
+
   .img_cercle_AI {
     width: 400px !important;
     margin-top: 60px !important;
     margin-left: 30px !important;
   }
+
   #etape_AI {
     width: 400px !important;
     height: 380px !important;
@@ -423,22 +338,27 @@
     transition: box-shadow .3s;
     margin-left: 60px !important;
   }
+
   /***===============***/
   /**** A propos interface ****/
   #AproposHeader {
     margin-top: 18% !important;
   }
+
   #AproposImgSize {
     width: 380px !important;
   }
+
   /*===========================*/
   /** espace Carriere **/
   .ContactezNous_container {
     margin-left: 10% !important;
     margin-right: 6% !important;
   }
+
   /*===================*/
 }
+
 /************************/
 
 /*********** mobile screen between 320 px and 375px ***********/
@@ -449,12 +369,15 @@
     margin-left: 4% !important;
     margin-top: -25% !important;
   }
+
   #copyright_title {
     margin-left: -65% !important;
   }
+
   #navfooter {
     padding-top: 15% !important;
   }
+
   /*==========*/
   /**navbar **/
   .nav-header {
@@ -465,19 +388,13 @@
     margin-top: -25px !important;
     padding-right: 25px !important;
   }
+
   /*==========**/
   /**home Interface**/
   .description_img {
     width: 250px !important;
   }
-  .contenuS .image {
-    transform: scale(1.3);
-    z-index: 2;
-    width: 240px !important;
-    height: 210px !important;
-    margin: 30px !important;
-    margin-left: -55px !important;
-  }
+
   .text {
     background-color: gray;
     opacity: 1;
@@ -490,13 +407,7 @@
     padding-top: 4%;
     border-radius: 0px 0px 25px 25px;
   }
-  .middle {
-    opacity: 1 !important;
-    position: absolute;
-    top: 81%;
-    left: 100px;
-    text-align: center;
-  }
+
   .image {
     opacity: 1;
     display: block;
@@ -504,41 +415,18 @@
     width: 120px !important;
     height: 270px !important;
   }
-  .contenuS {
-    position: relative;
-    width: 50%;
-    margin-left: 10% !important;
-  }
-  #hodhod1 {
-    width: 340px !important;
-    height: 250px !important;
-    margin-left: -20px !important;
-    margin-top: 70px !important;
-  }
-  .expertiseBox {
-    background-color: rgba(255, 255, 255, 0.3);
-    box-shadow: 0px 3px 6px #888992;
-    border-radius: 21px;
-    opacity: 1;
-    backdrop-filter: blur(7px);
-    width: 450px !important;
-    height: 280px !important;
-    margin-left: 80px !important;
-    padding-top: 2.5%;
-    line-height: 3em;
-  }
-  #expertiseBoxItems {
-    font-size: 14px !important;
-  }
+
   #portfolio1 {
     width: 250px !important;
     margin-left: 25px !important;
   }
+
   /**==================**/
   /*****A propos Interface *****/
   #AproposImgSize {
     width: 315px !important;
   }
+
   /**================**/
   /**Hodhod Interface **/
   .NosServices_Container {
@@ -546,19 +434,24 @@
     margin-bottom: 100px;
     width: 100%;
   }
-  #HodhodContentParagraph{
+
+  #HodhodContentParagraph {
     margin-top: -320px !important;
   }
+
   #bgPsize {
     border-radius: 25px;
     margin-top: 20px !important;
   }
-  #compBorder1{
+
+  #compBorder1 {
     margin-bottom: 50px !important;
   }
-  #compBorder2{
+
+  #compBorder2 {
     margin-bottom: 50px !important;
   }
+
   #videoPicture {
     width: 300px !important;
   }
@@ -604,7 +497,7 @@
     text-align: center;
     padding-top: 80px;
   }
-  
+
   #img-descriptionSensesIA {
     width: 280px !important;
     height: 90% !important;
@@ -684,15 +577,6 @@
     width: 300px !important;
   }
 
-  .contenuS .image {
-    transform: scale(1.3);
-    z-index: 2;
-    width: 240px !important;
-    height: 210px !important;
-    margin: 30px !important;
-    margin-left: -55px !important;
-  }
-
   .text {
     background-color: gray;
     opacity: 1;
@@ -706,52 +590,12 @@
     border-radius: 0px 0px 25px 25px;
   }
 
-  .middle {
-    opacity: 1 !important;
-    position: absolute;
-    top: 81%;
-    left: 100px;
-    text-align: center;
-  }
-
   .image {
     opacity: 1;
     display: block;
     transition: .5s ease;
-
     width: 120px !important;
     height: 270px !important;
-
-  }
-
-  .contenuS {
-    position: relative;
-    width: 50%;
-    margin-left: 10% !important;
-  }
-
-  #hodhod1 {
-    width: 340px !important;
-    height: 250px !important;
-    margin-left: -20px !important;
-    margin-top: 70px !important;
-  }
-
-  .expertiseBox {
-    background-color: rgba(255, 255, 255, 0.3);
-    box-shadow: 0px 3px 6px #888992;
-    border-radius: 21px;
-    opacity: 1;
-    backdrop-filter: blur(7px);
-    width: 450px !important;
-    height: 280px !important;
-    margin-left: 80px !important;
-    padding-top: 2.5%;
-    line-height: 3em;
-  }
-
-  #expertiseBoxItems {
-    font-size: 16px !important;
   }
 
   #portfolio1 {
@@ -761,22 +605,25 @@
 
   /*=========*/
   /*Hodhod interface */
-  #HodhodContentParagraph{
+  #HodhodContentParagraph {
     margin-top: -320px !important;
   }
+
   #bgPsize {
     border-radius: 25px;
     margin-top: 20px !important;
   }
-  
- 
-  
-  #compBorder1{
+
+
+
+  #compBorder1 {
     margin-bottom: 50px !important;
   }
-  #compBorder2{
+
+  #compBorder2 {
     margin-bottom: 50px !important;
   }
+
   #videoPicture {
     width: 300px !important;
   }
@@ -901,55 +748,6 @@
   }
 
   /*============*/
-
-  /**Home Interface */
-
-  .contenuS .image {
-    transform: scale(1.3);
-    z-index: 2;
-    width: 240px !important;
-    height: 210px !important;
-    margin: 30px !important;
-    margin-left: -55px !important;
-  }
-
-  .text {
-    background-color: gray;
-    opacity: 1;
-    color: white;
-    font-size: 10px;
-    width: 298px !important;
-    height: 81px;
-    margin-left: -69px !important;
-    margin-top: 43px !important;
-    padding-top: 4%;
-    border-radius: 0px 0px 25px 25px;
-  }
-
-  .middle {
-    opacity: 1 !important;
-    position: absolute;
-    top: 81%;
-    left: 100px;
-    text-align: center;
-  }
-
-  .image {
-    opacity: 1;
-    display: block;
-    transition: .5s ease;
-
-    width: 120px !important;
-    height: 270px !important;
-
-  }
-
-  .contenuS {
-    position: relative;
-    width: 50%;
-    margin-left: 20% !important;
-  }
-
   /**==================*/
   /** HodHod interface **/
   #hodhodbox {
@@ -958,7 +756,7 @@
     width: 650px !important;
   }
 
-  
+
   #ImpactText {
     font-size: 12px !important;
 
@@ -989,10 +787,11 @@
 /*****************************/
 
 /*********Nos Solutions **********/
-#HodhodContentParagraph{
+#HodhodContentParagraph {
   margin-left: 84px;
-  
+
 }
+
 .PictureContent {
   width: 80%;
   margin-left: 10%;
@@ -1107,7 +906,7 @@
 
 #bgPsize {
   border-radius: 25px;
-  height: 300px ;
+  height: 300px;
 }
 
 #imageSize {
@@ -1202,6 +1001,13 @@
 
 }
 
+@media(max-width: 404px) {
+  #title1 {
+    font-size: 26px;
+  }
+}
+
+
 #title2 {
 
   font-style: normal;
@@ -1211,10 +1017,7 @@
   line-height: 30px;
 }
 
-.p1 {
-  display: flex;
-  justify-content: center;
-}
+
 
 .p1 p {
   text-align: center;
@@ -1225,10 +1028,14 @@
   line-height: 26px;
 }
 
-.images {
+@media(max-width: 767px) {
+  .p1 p {
+    text-align: left;
+  }
+}
 
-  padding-top: 5%;
-  margin-left: 60px;
+.images {
+  margin-top: 60px;
 }
 
 .img {
@@ -1253,10 +1060,6 @@
 }
 
 /********hover Images****/
-.contenuS {
-  position: relative;
-  width: 50%;
-}
 
 .image {
   opacity: 1;
@@ -1268,41 +1071,74 @@
 
 }
 
-.middle {
-  transition: .5s ease;
-  opacity: 0;
-  position: absolute;
-  top: 81%;
-  left: 100px;
-  transform: translate(-50%, -50%);
-  -ms-transform: translate(-50%, -50%);
+.our-value-item {
+  position: relative;
   text-align: center;
 }
 
-.contenuS:hover .image {
-  transform: scale(1.3);
-  z-index: 2;
-  width: 327px;
-  height: 267px;
-
+.our-value-image {
+  transition: transform .2s;
+  width: 100%;
+  max-width: 340px;
 }
 
-.contenuS:hover .middle {
+.our-value-text-container {
+  transition: transform .2s;
+  opacity: 0;
+  position: absolute;
+  bottom: -1px;
+  width: 106%;
+  max-width: 354px;
+  background: rgba(150, 149, 149, 0.253);
+  left: 50%;
+  transform: translateX(-50%);
+  -webkit-transform: translateX(-50%);
+  border-bottom-left-radius: 18px;
+  border-bottom-right-radius: 18px;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  backdrop-filter: blur(10px);
+}
+
+.our-value-text {
+  align-self: center;
+  font-weight: 500;
+}
+
+.our-value-item:hover .our-value-image {
+  transform: scale(1.1);
+  z-index: 2;
+}
+
+.our-value-item:hover .our-value-text-container {
   opacity: 1;
 }
 
-.text {
-  background-color: gray;
-  opacity: 0.9;
-  color: white;
-  font-size: 25px;
-  width: 404px;
-  height: 81px;
-  margin-left: 15.5%;
-  margin-top: 19%;
-  padding-top: 4%;
-  border-radius: 0px 0px 25px 25px;
+
+@media(max-width: 991px) {
+  .our-value-text-container {
+    opacity: 1;
+    width: 96% !important;
+    bottom: 0 !important;
+    max-width: 326px !important;
+  }
+
+  .our-value-item:hover .our-value-image {
+    transform: none !important;
+  }
 }
+
+@media(max-width: 767px) {
+  .our-value-item {
+    margin-bottom: 14px;
+  }
+}
+
+
+
+
 
 /**********************/
 #hoverImg2 :hover {
@@ -1318,9 +1154,100 @@
 }
 
 .solution {
-  margin-top: 10%;
+  margin-top: 140px;
+}
+
+.solutions-container {
+  margin-top: 20px;
+}
+
+.link-to-solution {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 
 }
+
+.solution-img {
+  width: 100%;
+  max-width: 446px;
+  align-self: center;
+  box-shadow: 0px 3px 6px #888992;
+  border-radius: 20px;
+}
+
+.solution-description-container {
+  position: absolute;
+  bottom: -50px;
+  left: 50%;
+  width: 60%;
+  transform: translateX(-50%);
+  -webkit-transform: translateX(-50%);
+  background: rgba(150, 149, 149, 0.253);
+  backdrop-filter: blur(7px);
+  -webkit-backdrop-filter: blur(7px);
+  border-radius: 21px;
+  box-shadow: 0px 3px 6px #888992;
+  padding: 40px 20px 20px 20px;
+}
+
+.solution-title {
+  text-align: center;
+  color: black;
+  font-size: 25px;
+  font-weight: 500;
+  margin-bottom: 10px;
+}
+
+.solution-text {
+  color: black;
+  font-size: 16px;
+  text-align: center;
+}
+
+.solution-icon {
+  position: absolute;
+  bottom: 75px;
+  left: 50%;
+  transform: translateX(-50%);
+  -webkit-transform: translateX(-50%);
+}
+
+@media(max-width: 1199px) {
+  .solution-description-container {
+    width: 80%;
+  }
+}
+
+@media(max-width: 991px) {
+  .solution-description-container {
+    width: 90%;
+    padding: 40px 5px 20px 5px;
+  }
+}
+
+@media(max-width: 767px) {
+  .solution-description-container {
+    width: 76%;
+  }
+
+  .solutions-container .col-md-6:not(:last-child) {
+    margin-bottom: 120px;
+  }
+}
+
+@media(max-width: 412px) {
+  .solution-description-container {
+    width: 90%;
+  }
+}
+
+
+
+
 
 #boxs {
   margin-top: 6%;
@@ -1388,7 +1315,7 @@
 #img3Solution {
   width: 70%;
   height: 326px;
-  
+
 }
 
 #hodhodTitle {
@@ -1403,9 +1330,11 @@
   padding-top: 6%;
 
 }
-#hodhodP{
+
+#hodhodP {
   width: 99%;
 }
+
 #hodhodparagraph {
   font-size: 16px;
   text-align: center;
@@ -1440,52 +1369,50 @@
 }
 
 .expertisets {
+  margin-top: 140px;
   width: 100%;
-  padding-right: 60px;
   background-image: url('./components/images/Bg_expertise.jpg');
   background-repeat: no-repeat;
   background-size: cover;
-  height: 530px;
+  background-position: center;
   display: flex;
   align-items: center;
   justify-content: end;
   margin-bottom: 20px;
-  padding-top: 20px;
+  padding: 70px 60px;
 }
 
 .expertiseBox {
-  background-color: rgb(255, 255, 255);
-  box-shadow: 0px 3px 6px #888992;
+  background-color: rgba(255, 255, 255, 0.623);
   border-radius: 21px;
-  opacity: 0.85;
   backdrop-filter: blur(7px);
-  padding: 30px 10px;
+  padding: 30px 20px 20px 10px;
   line-height: 3em;
-  height: 370px;
-  margin-top: 60px;
+  align-self: center;
+  height: 100%;
 }
 
 .expertiseBox ul {
   list-style: none;
 }
 
-#expertiseTitle {
-  font-size: 37px;
-  text-align: center;
-  font-style: normal;
-  font-variant: normal;
-  font-weight: medium;
-  line-height: 30px;
-  color: #000;
-  margin-top: 14%;
+.expertiseBoxItems {
+  font-weight: 500 !important;
+}
+
+.expertiseBox ul li:not(:last-child) {
+  margin-bottom: 20px;
+}
+
+
+@media(max-width: 487px) {
+  .expertisets {
+    padding: 30px 20px;
+  }
 }
 
 
 
-.expertiseList {
-  list-style: none;
-
-}
 
 
 
@@ -1593,10 +1520,11 @@
   }
 }
 
-@media(max-width: 989px) {
+@media(max-width: 991px) {
   #bg_img_header {
     background-size: 500px 209px;
   }
+
   .Description_supersenses {
     margin-top: 100px !important;
   }
@@ -1627,6 +1555,7 @@
   margin-left: 10px;
   margin-right: 5px;
 }
+
 #languageIcon {
   display: inline;
   margin-left: 150%;
@@ -1651,7 +1580,7 @@
 }
 
 
-/* Mobile navbar background */
+/* Mobile navbar style */
 @media(max-width: 991px) {
   #basic-navbar-nav {
     background-color: rgba(255, 255, 255, 0.896);
@@ -1663,10 +1592,12 @@
     flex-direction: column;
     box-shadow: 0px 3px 6px #888992;
     border-radius: 21px;
-    
+
   }
 
-  #basic-navbar-nav .Nav_home, #basic-navbar-nav #dropdown_Solution {
+  #basic-navbar-nav .Nav_home,
+  #basic-navbar-nav #dropdown_Solution,
+  #basic-navbar-nav .dropdown-item {
     color: black;
     text-align: center;
     width: 100%;
@@ -1679,15 +1610,80 @@
 
 
 /***************NavBarFooter******************/
-#navfooter {
+#supersenses-footer {
+  margin-top: 60px;
   background-image: url('../src/components/images/bg_img_footer1_1_1510x400.png');
   background-repeat: no-repeat;
-  background-size: 100% 100%;
-  width: 99.236%;
+  background-size: 1510px 400px;
+  background-position: bottom left;
   height: 400px;
-  margin-left: 0%;
-  margin-top: 6%;
 }
+
+#supersenses-footer .container {
+  height: 100%;
+}
+
+#supersenses-footer .flex-footer {
+  height: 90%;
+  padding-bottom: 50px;
+}
+
+#supersenses-footer .copy-right {
+  height: 10%;
+  color: white;
+  text-align: center;
+}
+
+.logo-footer {
+  width: 100%;
+  max-width: 170px;
+}
+
+.contact-link {
+  text-decoration: none;
+  color: white;
+}
+
+.contact-link:hover {
+  text-decoration: underline;
+  color: white;
+}
+
+.footer-socials-title {
+  color: white;
+  margin-right: 10px;
+}
+
+.footer-social-icon {
+  margin-right: 10px;
+}
+
+.logo-footer-container {
+  margin-right: 80px;
+}
+
+.contact-container {
+  margin-right: 20px;
+}
+
+@media(max-width: 767px) {
+  #supersenses-footer .flex-footer {
+    display: block !important;
+    flex: none !important;
+    padding-top: 140px;
+  }
+
+  .social-media-container {
+    margin-top: 40px;
+  }
+}
+
+@media(max-width: 460px) {
+  .logo-footer-container {
+    margin-right: 30px;
+  }
+}
+
 
 #logo_sup {
   margin-left: 35%;
@@ -1756,6 +1752,7 @@
   width: 164px;
   height: 109px;
 }
+
 #PicturesPadding {
   margin-left: 5%;
   width: 80%;
@@ -1763,7 +1760,7 @@
 
 #imageSize {
   width: 100%;
-  height: 65% ;
+  height: 65%;
 }
 
 
@@ -1937,8 +1934,13 @@
 }
 
 /*******************HomePage*********************/
+
+.portfolio-container {
+  margin-top: 120px;
+}
+
 .part2 {
-  margin-top: 15%;
+  margin-top: 100px;
   width: 100%;
 }
 
@@ -1946,11 +1948,7 @@
   width: 1530px;
 }
 
-#hodhod1 {
-  width: 488px;
-  height: 370px;
-  margin-top: 70px;
-}
+
 
 #LinkHome {
   text-decoration: none;
@@ -1988,7 +1986,8 @@
   width: 100px !important;
 }
 
-#dropdown_Solution, .Nav_home {
+#dropdown_Solution,
+.Nav_home {
   color: white;
   font-size: 16px;
   margin-right: 20px;
@@ -2006,12 +2005,46 @@
   margin-top: 200px;
 }
 
+.bienvenuto {
+  font-size: 37px;
+  letter-spacing: -0.59px;
+  font-weight: 500;
+}
+
+.big-title {
+  font-size: 69px;
+  letter-spacing: -1.56px;
+  font-weight: 500;
+}
+
+.bienvenuto-p {
+  font-size: 18px;
+}
+
+.more-info-btn {
+  border: 1px solid black !important;
+  border-radius: 10px !important;
+  padding: 7px 30px !important;
+  font-size: 16px !important;
+}
+
 @media(max-width: 766px) {
   .Description_supersenses {
     margin-top: 50px !important;
   }
-  
 }
+
+@media(max-width: 991px) {
+  .bienvenuto {
+    font-size: 27px;
+  }
+
+  .big-title {
+    font-size: 49px;
+  }
+
+}
+
 
 .title_references {
   text-align: center;
@@ -2250,7 +2283,7 @@
 }
 
 
-#selectSpecialite{
+#selectSpecialite {
   width: 100%;
   height: 43%;
   border-color: #bdbdbd;

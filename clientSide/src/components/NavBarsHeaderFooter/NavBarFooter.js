@@ -6,60 +6,64 @@ import { Link } from "react-router-dom";
 const NavbarFooter = () => {
 
     return (
-        <div id="navfooter" >
-            <div className="row">
-                <div className="col">
-                    <a href="/"><img src={logo_supersenses} className="w-50 " id="logo_sup" /></a>
-                </div>
-                <div className="col " id="col_nav">
-
-                    <Link to="EspaceCarriere/" style={{ textDecoration: "none", color: "white" }}>
-                        <div className="row" id="espCar">
-                            &nbsp;&nbsp; Espace carriere
+        <div id="supersenses-footer">
+            <div className="container">
+                <div className="d-flex justify-content-around flex-footer">
+                    <div className="logo-contact-container d-flex justify-content-center">
+                        <div className="logo-footer-container align-self-end">
+                            <a href="/">
+                                <img src={logo_supersenses} className="logo-footer" alt="Super Senses Logo" /></a>
                         </div>
-                    </Link>
-                    <Link to="ContactezNous" style={{ textDecoration: "none", color: "white" }}>
-                        <div className="row" id="espCar">
-                            &nbsp;&nbsp; Contactez nous
-                        </div>
-                    </Link>
-                    <div className="row" id="espCar">
-                        &nbsp;&nbsp; +216 92 469 629
-
-                    </div>
-                    <div className="row" id="espCar">
-                        &nbsp;&nbsp; info@supersenses.tn
-                    </div>
-                    {/* <div className="row">
-                        <div class="input-group">
-                            <input type="text" class="form-control" placeholder="" aria-label="Recipient's username" aria-describedby="basic-addon2" />
-                            <div class="input-group-append">
-                                <button class="btn btn-primary" type="button">S'inscrire</button>
+                        <div className="contact-container align-self-end">
+                            <div>
+                                <Link to="EspaceCarriere/" className="contact-link">
+                                    Espace carrière
+                                </Link>
+                            </div>
+                            <div>
+                                <Link to="ContactezNous/" className="contact-link">
+                                    Contactez nous
+                                </Link>
+                            </div>
+                            <div>
+                                <a href="tel:+21692469629" className="contact-link">
+                                    (216) 92 469 629
+                                </a>
+                            </div>
+                            <div>
+                                <a href="mailto:contact@supersenses.tn" className="contact-link">
+                                    contact@supersenses.tn
+                                </a>
                             </div>
                         </div>
-                    </div> */}
-                    <div className="row mt-5" id="copyright_title">
-                        SuperSenses &copy;2022 Tous droit réservés
+                    </div>
+
+                    <div className="social-media-container align-self-end">
+                        <div className="d-flex justify-content-center">
+                            <div className="footer-socials-title">
+                                Trouvez-nous sur
+                            </div>
+                            <div className="footer-social-icon">
+                                <a href="https://www.facebook.com/SuperSenses.TN/">
+                                    <img src={logo_facebook} alt="Facebook" />
+                                </a>
+                            </div>
+                            <div className="footer-social-icon">
+                                <a href="https://www.linkedin.com/company/super-senses-tn/">
+                                    <img src={logo_linkedIn} alt="Linkedin" />
+                                </a>
+                            </div>
+                            <div className="footer-social-icon">
+                                <img src={logo_instagram} alt="Instagram" />
+                            </div>
+                        </div>
                     </div>
                 </div>
-                <div className="col" id="SocialMediaIcons">
 
-                    <ul>
-                        <li><h6>Trouver nous sur </h6></li>
-                        <li>&nbsp;&nbsp;</li>
-                        <li> <a href="https://www.facebook.com/SuperSenses.TN/"><img src={logo_facebook}/></a></li>
-                        <li>&nbsp;&nbsp;</li>
-                        <li><a href="https://www.linkedin.com/company/super-senses-tn/"><img src={logo_linkedIn}  /></a></li>
-                        <li>&nbsp;&nbsp;</li>
-                        <li><img src={logo_instagram}/></li>
-                    </ul>
-
-
-
-
+                <div className="copy-right">
+                    © Tous droits réservés - 2022.
                 </div>
             </div>
-
         </div>
     );
 

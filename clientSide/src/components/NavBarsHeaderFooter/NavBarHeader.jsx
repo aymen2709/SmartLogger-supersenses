@@ -25,7 +25,7 @@ function NavBarHeader() {
           <Navbar.Toggle aria-controls="basic-navbar-nav" />
           <Navbar.Collapse id="basic-navbar-nav">
             <Nav className="me-auto">
-              <LinkContainer to="/"><Nav.Link className='Nav_item' id='NavText_other'><h6>Acceuil</h6></Nav.Link></LinkContainer>
+              <LinkContainer to="/"><Nav.Link className='Nav_item' id='NavText_other'><h6>Accueil</h6></Nav.Link></LinkContainer>
               <div className='btnNosSolution'>
                 <Dropdown as={ButtonGroup}>
                   {/* <Button href="/#boxs" variant="transparent">NOS SOLUTIONS</Button> */}
