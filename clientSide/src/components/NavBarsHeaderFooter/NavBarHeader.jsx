@@ -37,7 +37,7 @@ function NavBarHeader() {
                   </Dropdown.Menu>
                 </Dropdown>
               </div>
-              <LinkContainer to="/NosExpertises"><Nav.Link className='Nav_item' id='NavText_other'><h6>Notre expertise</h6></Nav.Link></LinkContainer>
+              <LinkContainer to="/NosExpertises"><Nav.Link className='Nav_item' id='NavText_other'><h6>Nos expertises</h6></Nav.Link></LinkContainer>
               <LinkContainer to="/Apropos"><Nav.Link className='Nav_item' id='NavText_other'><h6>A propos</h6></Nav.Link></LinkContainer>
               {/* <div className='dpSolution'><img src={language} id="languageIcon" /></div> */}
               {/* <Nav.Link id='selectLangue'>

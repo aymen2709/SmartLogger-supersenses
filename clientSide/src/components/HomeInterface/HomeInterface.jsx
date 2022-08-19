@@ -34,7 +34,7 @@ function HomeInterface() {
                 <NavDropdown.Item href="/SensesIA">SensesIA</NavDropdown.Item>
               </NavDropdown>
               <Nav.Link href="/NosExpertises" className='Nav_home' id='NavText_home'>
-                Notre expertise
+                Nos expertises
               </Nav.Link>
               <Nav.Link href="/Apropos" className='Nav_home' id='NavText_home'>
                 A propos
@@ -51,7 +51,7 @@ function HomeInterface() {
               <div className="bienvenuto">Bienvenue à</div>
               <div className="big-title">Super Senses</div>
               <p className="bienvenuto-p">Super Senses est une startup Tunisienne dévoilée par une équipe d’ingénieurs
-                multidisciplinaires. Notre vision est de crée un outil technologique d’aide à la
+                multidisciplinaires. Notre vision est de créer un outil technologique d’aide à la
                 décision capable d’ajouter un 6ieme sens utilisant l’intelligence artificielle.</p>
               <LinkContainer to="/Apropos"><Button className="more-info-btn" variant="outline-dark">Lire tout</Button></LinkContainer>
             </div>

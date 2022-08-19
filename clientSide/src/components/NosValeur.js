@@ -30,7 +30,7 @@ const NosValeur = () => {
 
       <div className="p1 container">
         <p><br></br>Nos engagements et nos valeurs nous définissent.<br></br>Ils sont le moteur de notre développement et la clé de notre réussite.<br></br>
-          Nous déposons nos savoir-faire et notre expertise au profit de nos clients.<br></br>
+          Nous déposons nos savoir-faire et nos expertises au profit de nos clients.<br></br>
           Nous sommes engagés de digitaliser notre quotidien pour un avenir meilleur.</p>
       </div>
 
@@ -107,7 +107,7 @@ const NosValeur = () => {
       <div className="expertisets">
         <div className='expertiseBox'>
           <ul>
-            <li><h1 className="expertiseBoxItems">Notre expertise</h1></li>
+            <li><h1 className="expertiseBoxItems">Nos expertises</h1></li>
             <li><h5 className="expertiseBoxItems"><i className="bi bi-check-circle-fill"></i>&nbsp;&nbsp;Machine Learning</h5></li>
             <li><h5 className="expertiseBoxItems"><i className="bi bi-check-circle-fill"></i>&nbsp;&nbsp;Internet des Objets</h5></li>
             <li><h5 className="expertiseBoxItems"><i className="bi bi-check-circle-fill"></i>&nbsp;&nbsp;Intelligence Artificielle</h5></li>
@@ -122,14 +122,14 @@ const NosValeur = () => {
         <div className='row'  >
           <h1 className='text-center'>Portfolio </h1>
           <h3 className='text-center'>L'esprit d'équipe est notre clé de réussite</h3><br></br>
-          <div className='col mt-5 text-center'>
-            <img src={port1} alt="portfolio" id="portfolio1" />
+          <div className='col-md-4 mt-5 text-center'>
+            <img src={port1} alt="portfolio" className="portfolio-img img-responsive" />
           </div>
-          <div className='col mt-5 text-center'>
-            <img src={port2} alt='portfolio' id="portfolio1" />
+          <div className='col-md-4 mt-5 text-center'>
+            <img src={port2} alt='portfolio' className="portfolio-img img-responsive" />
           </div>
-          <div className='col mt-5 text-center'>
-            <img src={port3} alt='portfolio' id="portfolio1" />
+          <div className='col-md-4 mt-5 text-center'>
+            <img src={port3} alt='portfolio' className="portfolio-img img-responsive" />
           </div>
         </div>
       </div>

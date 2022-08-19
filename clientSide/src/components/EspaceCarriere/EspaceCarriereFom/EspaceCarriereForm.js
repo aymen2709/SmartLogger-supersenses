@@ -250,7 +250,7 @@ function EspaceCarriereForm(props) {
           <Col>
             <Form.Label>Specialité:</Form.Label><br />
 
-            <select id="selectSpecialite"
+            <select id="SpecialiteCandidature"
               value={form.selectSpecialite}
               onChange={(e) => setField('selectSpecialite', e.target.value)}
               isInvalid={!!errors.selectSpecialite}

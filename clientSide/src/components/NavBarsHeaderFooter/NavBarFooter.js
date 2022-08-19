@@ -8,37 +8,36 @@ const NavbarFooter = () => {
     return (
         <div id="supersenses-footer">
             <div className="container">
-                <div className="d-flex justify-content-around flex-footer">
-                    <div className="logo-contact-container d-flex justify-content-center">
-                        <div className="logo-footer-container align-self-end">
-                            <a href="/">
-                                <img src={logo_supersenses} className="logo-footer" alt="Super Senses Logo" /></a>
+                <div className="row flex-footer">
+                    
+                    <div className="col-md-4 logo-footer-container align-self-end text-center">
+                        <a href="/">
+                            <img src={logo_supersenses} className="logo-footer" alt="Super Senses Logo" /></a>
+                    </div>
+                    <div className="col-md-4 contact-container align-self-end text-center">
+                        <div>
+                            <Link to="EspaceCarriere/" className="contact-link">
+                                Espace carrière
+                            </Link>
                         </div>
-                        <div className="contact-container align-self-end">
-                            <div>
-                                <Link to="EspaceCarriere/" className="contact-link">
-                                    Espace carrière
-                                </Link>
-                            </div>
-                            <div>
-                                <Link to="ContactezNous/" className="contact-link">
-                                    Contactez nous
-                                </Link>
-                            </div>
-                            <div>
-                                <a href="tel:+21692469629" className="contact-link">
-                                    (216) 92 469 629
-                                </a>
-                            </div>
-                            <div>
-                                <a href="mailto:contact@supersenses.tn" className="contact-link">
-                                    contact@supersenses.tn
-                                </a>
-                            </div>
+                        <div>
+                            <Link to="ContactezNous/" className="contact-link">
+                                Contactez nous
+                            </Link>
+                        </div>
+                        <div>
+                            <a href="tel:+21692469629" className="contact-link">
+                                (216) 92 469 629
+                            </a>
+                        </div>
+                        <div>
+                            <a href="mailto:contact@supersenses.tn" className="contact-link">
+                                contact@supersenses.tn
+                            </a>
                         </div>
                     </div>
 
-                    <div className="social-media-container align-self-end">
+                    <div className="col-md-4 social-media-container align-self-end text-center">
                         <div className="d-flex justify-content-center">
                             <div className="footer-socials-title">
                                 Trouvez-nous sur
@@ -61,7 +60,7 @@ const NavbarFooter = () => {
                 </div>
 
                 <div className="copy-right">
-                    © Tous droits réservés - 2022.
+                    SuperSenses &copy;2022 Tous droit réservés
                 </div>
             </div>
         </div>

@@ -11,62 +11,13 @@
   .btnNosSolution {
     margin-left: 7px;
   }
-
-  .btnNosSolutionHome {
-    margin-left: -15px;
-  }
 }
-
-/** homeinterface Navbar **/
-/* @media screen and (min-width:1700px) and (max-width:2100) {
-  #HomeNav {
-    padding-left: 190px !important;
-  }
-}
-
-@media only screen and (min-width:2100px) {
-  #HomeNav {
-    padding-left: 500px !important;
-  }
-} */
-
-/*====================*/
 
 /*********screen between 1024px and 1450px *************/
 @media only screen and (min-width: 1024px) and (max-width:1450px) {
 
-  #portfolioBox {
-    width: 97% !important;
-    margin-left: 25px !important;
-  }
-
   .Apropos {
     margin-top: 6% !important;
-  }
-
-  #portfolio1:hover {
-    transform: scale(1.3);
-    z-index: 2;
-    box-shadow: 50% 50% 50% rgb(97, 96, 96);
-    border-radius: 25px;
-    filter: drop-shadow(10px 10px 10px rgb(69, 71, 69));
-    width: 85% !important;
-  }
-
-  #portfolio1 {
-    width: 90%;
-  }
-
-  #boxs {
-    margin-top: 6%;
-    margin-left: 185px !important;
-    width: 990px !important;
-  }
-
-  #navfooter {
-    background-image: url('../src/components/images/bg_img_footer1_1_1510x400.png');
-    background-repeat: no-repeat;
-    background-size: cover;
   }
 
   .logo-footer {
@@ -154,9 +105,6 @@
     margin-left: 10px !important;
   }
 
-  #portfolio1 {
-    width: 100%;
-  }
 
   #img3Solution {
     width: 60% !important;
@@ -185,12 +133,6 @@
     height: 52% !important;
     margin-top: -20%;
     margin-left: 5% !important;
-  }
-
-  #boxs {
-    margin-top: 6%;
-    margin-left: 50px !important;
-    width: 990px !important;
   }
 
   #hodhodparagraph {
@@ -228,17 +170,9 @@
     margin-left: -65% !important;
   }
 
-  #navfooter {
-    padding-top: 15% !important;
-  }
 
   /*=============*/
   /* Homeinterface*/
-
-  #portfolio1 {
-    width: 250px !important;
-    margin-left: 25px !important;
-  }
 
   /*================*/
   /**Hodhod Interface **/
@@ -374,9 +308,6 @@
     margin-left: -65% !important;
   }
 
-  #navfooter {
-    padding-top: 15% !important;
-  }
 
   /*==========*/
   /**navbar **/
@@ -414,11 +345,6 @@
     transition: .5s ease;
     width: 120px !important;
     height: 270px !important;
-  }
-
-  #portfolio1 {
-    width: 250px !important;
-    margin-left: 25px !important;
   }
 
   /**==================**/
@@ -562,9 +488,6 @@
     margin-top: -20% !important;
   }
 
-  #navfooter {
-    padding-top: 15% !important;
-  }
 
   #copyright_title {
     margin-left: -50% !important;
@@ -596,11 +519,6 @@
     transition: .5s ease;
     width: 120px !important;
     height: 270px !important;
-  }
-
-  #portfolio1 {
-    width: 250px !important;
-    margin-left: 25px !important;
   }
 
   /*=========*/
@@ -741,10 +659,6 @@
   #copyright_title {
     margin-left: -3% !important;
     margin-top: 3% !important;
-  }
-
-  #navfooter {
-    padding-top: 15% !important;
   }
 
   /*============*/
@@ -1246,15 +1160,6 @@
 }
 
 
-
-
-
-#boxs {
-  margin-top: 6%;
-  margin-left: 170px;
-  width: 98%;
-}
-
 .bgSolution {
   width: 73%;
   height: 322px;
@@ -1417,20 +1322,9 @@
 
 
 /*********************************/
-.p2 {
-  display: flex;
-  justify-content: center;
-
-}
 
 .p2 p {
-  text-align: center;
-  font-style: normal;
-  font-variant: normal;
-  font-weight: medium;
-  font-family: 'CaviarDreams';
-  font-size: 16px;
-  line-height: 21px;
+  font-size: 18px;
 }
 
 .p3 {
@@ -1592,6 +1486,7 @@
     flex-direction: column;
     box-shadow: 0px 3px 6px #888992;
     border-radius: 21px;
+    backdrop-filter: blur(6px);
 
   }
 
@@ -1658,30 +1553,25 @@
   margin-right: 10px;
 }
 
-.logo-footer-container {
-  margin-right: 80px;
-}
-
-.contact-container {
-  margin-right: 20px;
-}
-
 @media(max-width: 767px) {
+  #supersenses-footer {
+    height: 480px;
+    background-size: 1510px 480px;
+  }
+
   #supersenses-footer .flex-footer {
-    display: block !important;
-    flex: none !important;
-    padding-top: 140px;
+    padding-top: 84px;
+    padding-bottom: 30px;
+  }
+
+  .logo-footer-container {
+    margin-bottom: 10px;
   }
 
   .social-media-container {
     margin-top: 40px;
   }
-}
 
-@media(max-width: 460px) {
-  .logo-footer-container {
-    margin-right: 30px;
-  }
 }
 
 
@@ -1955,12 +1845,23 @@
 
 }
 
-#portfolio1:hover {
-  transform: scale(1.3);
+.portfolio-img {
+  width: 100%;
+  max-width: 352px;
+}
+
+.portfolio-img:hover {
+  transform: scale(1.2);
   z-index: 2;
   box-shadow: 50% 50% 50% rgb(97, 96, 96);
   border-radius: 25px;
   filter: drop-shadow(10px 10px 10px rgb(69, 71, 69));
+}
+
+@media(max-width: 490px) {
+  .portfolio-img:hover {
+    transform: none;
+  }
 }
 
 .Nav_itemHomeInterface {
@@ -2132,14 +2033,14 @@
 
 .ServiceAI_data {
   padding: 30px;
-  background-color: rgba(224, 240, 253);
+  /*background-color: rgba(224, 240, 253);*/
   box-shadow: 0px 0px 15px rgba(224, 240, 253);
   border-radius: 10px;
 }
 
 .ServiceDigital_data {
   padding: 30px;
-  background-color: rgba(224, 240, 253);
+  /*background-color: rgba(224, 240, 253);*/
   box-shadow: 0px 0px 15px rgba(224, 240, 253);
   border-radius: 10px;
 }
@@ -2178,9 +2079,11 @@
 .AI_slogan {
   margin-top: 110px;
   margin-bottom: -10px;
+  padding-top: 25px;
+  padding-bottom: 25px;
   text-align: center;
-  color: #25ACDE;
-  font-size: 25px;
+  color: white;
+  font-size: 24px;
 }
 
 .bloc_etapes_AI {
@@ -2283,7 +2186,7 @@
 }
 
 
-#selectSpecialite {
+#SpecialiteCandidature {
   width: 100%;
   height: 43%;
   border-color: #bdbdbd;

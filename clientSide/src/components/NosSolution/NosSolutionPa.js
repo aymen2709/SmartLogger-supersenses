@@ -1,5 +1,4 @@
 import video from "../images/senses_IA.png";
-import img1 from '../images/Groupe 14672.png';
 import img2 from '../images/Carbo-arroser-terre.png';
 import img3 from '../images/Group14411.png';
 import img4 from '../images/Group14483.png';
@@ -15,45 +14,46 @@ const NosSolutionPa = () => {
   return (
     <div id="hodhodP">
 
-      <div className="row mt-5">
-        <div className="col p-5" id="HodhodContentParagraph">
-          <h1>Hodhod</h1>
-          <p>
-            Super senses fournit ses solutions innovantes à impact afin de résoudre<br></br>
-            des problèmes environnemental et digitaliser les villes tunisiennes.<br></br>
-            La ‘Hodhod’ est une solution destinée à lutter contre la pollution citadine
-            et<br></br> elle permet aux municipalités d’avoir un canal de communication interactive<br></br> avec
-            les citoyens en particulier et tout l'écosystème en général.
-          </p>
-        </div>
-        <div className="col text-center">
-          <img src={video} alt="video" className="videoBorder p-2  " id="videoPicture" />
+      <div className="container mt-5">
+        <div className="row">
+          <div className="col-md-6 align-self-center" id="HodhodContentParagraph">
+            <h1>Hodhod</h1>
+            <p>
+              Super senses fournit ses solutions innovantes à impact afin de résoudre
+              des problèmes environnemental et digitaliser les villes tunisiennes.
+            </p>
+            <p>
+              La ‘Hodhod’ est une solution destinée à lutter contre la pollution citadine
+              et elle permet aux municipalités d’avoir un canal de communication interactive avec
+              les citoyens en particulier et tout l'écosystème en général.
+            </p>
+          </div>
+          <div className="col-md-6">
+            <img src={video} alt="video" className="videoBorder p-2  " id="videoPicture" />
+          </div>
         </div>
       </div>
+
       <div className="container">
         <h6> Notre solution se compose de :</h6>
         <div className="row text-center" id="hodhodbox" >
 
           <div className="col-md-3 offset-1 img-thumbnail shadow" id="compBorder1">
 
-            <img src={kitelectronique} className="kitelectronique text-center " />
+            <img src={kitelectronique} className="kitelectronique text-center " alt="kit electronique" />
             <h6><br></br>Capteurs embarqués / kit électronique Collecte des datas.</h6>
           </div>
 
 
           <div className="col-md-3 offset-1  img-thumbnail shadow " id="compBorder2">
-
-
-            <img src={platform} className="platform text-center" />
+            <img src={platform} className="platform text-center" alt="Plateforme intelligente" />
             <h6><br></br>Plateforme intelligente interactive.</h6>
-
-
           </div>
 
 
 
           <div className="col-md-3 offset-1 img-thumbnail shadow" id="compBorder3">
-            <img src={appmobile} className="appmobile text-center" />
+            <img src={appmobile} className="appmobile text-center" alt="Application mobile" />
             <h6><br></br>Application mobile.</h6>
           </div>
 
@@ -62,7 +62,7 @@ const NosSolutionPa = () => {
       <div className="container text-center">
         <div className="row " id="mobSize">
           <div className="col">
-            <img src={mob} id="mobPicture" />
+            <img src={mob} id="mobPicture" alt="mobile" />
           </div>
           <div className="col">
             <h6 id="mobPara">L’application exploite tous les capteurs embarqué sur le Smartphone qui sera un outil de collecte des données sur terrain et remonter d’une manière efficace aux divers services de la municipalité.</h6>
@@ -88,47 +88,38 @@ const NosSolutionPa = () => {
 
       </div>
       <div className="container">
-        <h1 class="d-flex justify-content-center " id="ImpactBox">Les Impacts du Hodhod</h1><br></br><br></br><br></br>
+        <h1 className="d-flex justify-content-center " id="ImpactBox">Les Impacts du Hodhod</h1><br></br><br></br><br></br>
         <div id="PicturesPadding">
-          <div class="row p-3">
-            <div class="col-md-3 offset-1 img-thumbnail shadow" id="bgPsize">
-              <img class="" src={img4} id="imageSize" />
+          <div className="row p-3">
+            <div className="col-md-3 offset-1 img-thumbnail shadow" id="bgPsize">
+              <img src={img4} id="imageSize" alt="Impacts" />
               <h6 className="text-center" id="ImpactText"><br></br>Informer les citoyens avec les nouveautés de leurs communes.</h6>
             </div>
-            
-            <div class="col-md-3 offset-1 img-thumbnail shadow" id="bgPsize">
-              <img class="" src={img2} id="imageSize" />
+
+            <div className="col-md-3 offset-1 img-thumbnail shadow" id="bgPsize">
+              <img src={img2} id="imageSize" alt="Environment" />
               <h6 className="text-center" id="ImpactText"><br></br>Lutter contre la pollution.</h6>
               <h6 className="text-center" id="ImpactText">Préserver l’environnement.</h6>
             </div>
-            <div class="col-md-3 offset-1 img-thumbnail shadow" id="bgPsize">
-              <img class="" src={img3} id="imageSize" />
+            <div className="col-md-3 offset-1 img-thumbnail shadow" id="bgPsize">
+              <img src={img3} id="imageSize" alt="villes" />
               <h6 className="text-center" id="ImpactText"><br></br>Intégrer les citoyens dans l’amélioration de leurs villes</h6>
             </div>
           </div>
           <div className="row p-3 ">
-          <div class="col-md-3 offset-1 img-thumbnail shadow" id="bgPsize">
-              <img class="" src={img5} id="imageSize" />
+            <div className="col-md-3 offset-1 img-thumbnail shadow" id="bgPsize">
+              <img src={img5} id="imageSize" alt="Réclamation" />
               <h6 className="text-center" id="ImpactText"><br></br>Dépister et analyser les réclamations des citoyens en se basant sur l’intelligence artificielle.</h6>
             </div>
-            <div class="col-md-3 offset-1 img-thumbnail shadow" id="bgPsize">
-              <img class="" src={img6} id="imageSize" />
+            <div className="col-md-3 offset-1 img-thumbnail shadow" id="bgPsize">
+              <img src={img6} id="imageSize" alt="budget" />
               <h6 className="text-center" id="ImpactText"><br></br>Minimiser le budget alloué pour faire les actions de communications.</h6>
             </div>
-            <div class="col-md-3 offset-1 img-thumbnail shadow" id="bgPsize">
-              <img class="" src={img7} id="imageSize" />
+            <div className="col-md-3 offset-1 img-thumbnail shadow" id="bgPsize">
+              <img src={img7} id="imageSize" alt="Minimiser" />
               <h6 className="text-center" id="ImpactText"><br></br>Minimiser le budget alloué pour faire les interventions ici nous parlons des ressources humaines et financières…</h6>
             </div>
           </div>
-          {/* <div class="row p-3">
-          
-          <div class="col-md-3 offset-1 img-thumbnail shadow" id="bgPsize">
-            <img class="w-100" src={img1} id="imageSize" />
-          </div>
-          <div class="col-md-3 offset-1 img-thumbnail shadow" id="bgPsize">
-            <img class="w-100" src={img1} id="imageSize" />
-          </div>
-        </div> */}
         </div>
       </div>
 
