@@ -1845,17 +1845,28 @@
 
 }
 
+
+
+.portfolio-img-container {
+  height: 226px;
+  width: 352px;
+  box-shadow: 50% 50% 50% rgb(97, 96, 96);
+  border-radius: 25px;
+  filter: drop-shadow(10px 10px 10px rgb(69, 71, 69));
+}
+
 .portfolio-img {
+  height: 100%;
   width: 100%;
-  max-width: 352px;
+  object-fit: cover;
 }
 
 .portfolio-img:hover {
   transform: scale(1.2);
   z-index: 2;
-  box-shadow: 50% 50% 50% rgb(97, 96, 96);
-  border-radius: 25px;
-  filter: drop-shadow(10px 10px 10px rgb(69, 71, 69));
+  /* box-shadow: 50% 50% 50% rgb(97, 96, 96);
+  border-radius: 25px; */
+  /* filter: drop-shadow(10px 10px 10px rgb(69, 71, 69)); */
 }
 
 @media(max-width: 490px) {
