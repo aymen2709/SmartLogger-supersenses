@@ -4,10 +4,7 @@ import img3 from './images/Component17–6.png';
 import hodhod1 from "./images/Mask Group 10115.png";
 import hodhod2 from "./images/senses_IA.png";
 import iconMsg from "./images/Group 14382.png";
-import port1 from './images/christina-wocintechchat-com-faEfWCdOKIg-unsplash.png';
-import port2 from './images/scott-graham-5fNmWej4tAA-unsplash.png';
-import port3 from './images/sigmund-Im_cQ6hQo10-unsplash.png';
-import ccd4SarraImg from './images/portfolio/ccd4_group.jpg';
+import ccd4SarraImg from './images/portfolio/ccd4_sarra.jpg';
 import ccd4GroupImg from './images/portfolio/ccd4_group.jpg';
 import municipalite1Img from './images/portfolio/municipalite_1.jpg';
 import municipalite2Img from './images/portfolio/municipalite_2.jpg';
@@ -125,44 +122,51 @@ const NosValeur = () => {
         </div>
       </div>
 
+      {/* Portfolio */}
       <div className='container portfolio-container'>
         <div className='row'>
           <h1 className='text-center'>Portfolio </h1>
           <h3 className='text-center'>L'esprit d'équipe est notre clé de réussite</h3><br></br>
-          <div className='col-md-4 mt-5 text-center'>
-            <div className='portfolio-img-container'>
-              <img src={ccd4SarraImg} alt="Participation de CEO de Supersenses Madame Sarra Boufayed à CCD4 TUNISIA"
-                className="portfolio-img img-responsive" />
-            </div>
 
-          </div>
-          <div className='col-md-4 mt-5 text-center'>
+          <div className='col-lg-4 mt-5 text-center'>
             <div className='portfolio-img-container'>
               <img src={ccd4GroupImg} alt='Les participants de CCD4 Tunisia'
                 className="portfolio-img img-responsive" />
             </div>
           </div>
-          <div className='col-md-4 mt-5 text-center'>
+
+          <div className='col-lg-4 mt-5 text-center'>
             <div className='portfolio-img-container'>
               <img src={municipalite1Img} alt='Municipalité 1' className="portfolio-img img-responsive" />
             </div>
           </div>
-          <div className='col-md-4 mt-5 text-center'>
+
+          <div className='col-lg-4 mt-5 text-center'>
             <div className='portfolio-img-container'>
               <img src={municipalite2Img} alt='Municipalité 2' className='portfolio-img img-responsive' />
             </div>
           </div>
-          <div className='col-md-4 mt-5 text-center'>
+
+          <div className='col-lg-4 mt-5 text-center'>
             <div className='portfolio-img-container'>
-              <img src={safranImg} alt="Safran" className='portfolio-img img-responsive' />
+              <img src={ccd4SarraImg} alt="Participation de CEO de Supersenses Madame Sarra Boufayed à CCD4 TUNISIA"
+                className="portfolio-img img-responsive" />
             </div>
           </div>
-          <div className='col-md-4 mt-5 text-center'>
+
+          <div className='col-lg-4 mt-5 text-center'>
             <div className='portfolio-img-container'>
               <img src={sidiBoualiImg} alt="Municipalité de Sidi Bou Ali" className='portfolio-img img-responsive' />
             </div>
           </div>
+
+          <div className='col-lg-4 mt-5 text-center'>
+            <div className='portfolio-img-container'>
+              <img src={safranImg} alt="CTO Aymen Abid Boukadida chez Safran" className='portfolio-img img-responsive' />
+            </div>
+          </div>
         </div>
+
       </div>
 
     </div>
