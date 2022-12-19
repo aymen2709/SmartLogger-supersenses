@@ -130,6 +130,7 @@ const NosValeur = () => {
 
           <div className='col-lg-4 mt-5 text-center'>
             <div className='portfolio-img-container'>
+              <span className='helper-portfolio'></span>
               <img src={ccd4GroupImg} alt='Les participants de CCD4 Tunisia'
                 className="portfolio-img img-responsive" />
             </div>
@@ -137,18 +138,21 @@ const NosValeur = () => {
 
           <div className='col-lg-4 mt-5 text-center'>
             <div className='portfolio-img-container'>
+              <span className='helper-portfolio'></span>
               <img src={municipalite1Img} alt='Municipalité 1' className="portfolio-img img-responsive" />
             </div>
           </div>
 
           <div className='col-lg-4 mt-5 text-center'>
             <div className='portfolio-img-container'>
+              <span className='helper-portfolio'></span>
               <img src={municipalite2Img} alt='Municipalité 2' className='portfolio-img img-responsive' />
             </div>
           </div>
 
           <div className='col-lg-4 mt-5 text-center'>
             <div className='portfolio-img-container'>
+              <span className='helper-portfolio'></span>
               <img src={ccd4SarraImg} alt="Participation de CEO de Supersenses Madame Sarra Boufayed à CCD4 TUNISIA"
                 className="portfolio-img img-responsive" />
             </div>
@@ -156,12 +160,14 @@ const NosValeur = () => {
 
           <div className='col-lg-4 mt-5 text-center'>
             <div className='portfolio-img-container'>
+              <span className='helper-portfolio'></span>
               <img src={sidiBoualiImg} alt="Municipalité de Sidi Bou Ali" className='portfolio-img img-responsive' />
             </div>
           </div>
 
           <div className='col-lg-4 mt-5 text-center'>
             <div className='portfolio-img-container'>
+              <span className='helper-portfolio'></span>
               <img src={safranImg} alt="CTO Aymen Abid Boukadida chez Safran" className='portfolio-img img-responsive' />
             </div>
           </div>
