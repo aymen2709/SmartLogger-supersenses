@@ -10,8 +10,27 @@ import fontawesome from '@fortawesome/fontawesome'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCheckSquare, faCoffee } from '@fortawesome/fontawesome-free-solid';
 import NavDropdown from 'react-bootstrap/NavDropdown';
+import { useEffect } from 'react';
+import { useState } from 'react';
+import NavBarHeader from "../NavBarsHeaderFooter/NavBarHeader";
+import ButtonGroup from 'react-bootstrap/ButtonGroup';
+import Dropdown from 'react-bootstrap/Dropdown';
+import { HashLink } from 'react-router-hash-link';
 
 function HomeInterface() {
+
+  const [isScrolled, setIsScrolled] = useState(false);
+
+  const onScrollEvent = () => {
+    window.scrollY >= 100 ? setIsScrolled(true) : setIsScrolled(false);
+  }
+
+  useEffect(() => {
+    window.addEventListener('scroll', onScrollEvent);
+    return () => {
+      window.removeEventListener('scroll', onScrollEvent);
+    }
+  }, []);
 
   fontawesome.library.add(faCheckSquare, faCoffee);
 
@@ -28,21 +47,38 @@ function HomeInterface() {
           </Navbar.Toggle>
           <Navbar.Collapse id="basic-navbar-nav">
             <Nav className="ms-auto" id="HomeNav">
-              <Nav.Link className='Nav_home' id='NavText_home' href="/">Accueil</Nav.Link>
-              <NavDropdown title="Nos Solutions" id="dropdown_Solution">
+              <Nav.Link className='Nav_home NavText_home' id='' href="/">Accueil</Nav.Link>
+              {/* <NavDropdown title="Nos Solutions" id="dropdown_Solution">
                 <NavDropdown.Item href="/Hodhod">Hodhod</NavDropdown.Item>
                 <NavDropdown.Item href="/SensesIA">SensesIA</NavDropdown.Item>
-              </NavDropdown>
-              <Nav.Link href="/NosExpertises" className='Nav_home' id='NavText_home'>
+              </NavDropdown> */}
+              <div className='btnNosSolution'>
+                <Dropdown as={ButtonGroup}>
+                  <Button variant='transparent' >
+                    <HashLink style={{ textDecoration: "none", color: "black" }} smooth to="/#no-solutions">
+                      <h6 className="NavText_home">Nos Solutions</h6>
+                    </HashLink>
+                  </Button>
+                  <Dropdown.Toggle split variant="transparent" size="sm" id="dropdown-split-basic" />
+                  <Dropdown.Menu size="sm">
+                    <Dropdown.Item href="/Hodhod"><h6 className="NavText_home">Hodhod</h6></Dropdown.Item>
+                    <Dropdown.Item href="/SensesIA"><h6 className="NavText_home">SensesIA</h6></Dropdown.Item>
+                  </Dropdown.Menu>
+                </Dropdown>
+              </div>
+              <Nav.Link href="/NosExpertises" className='Nav_home NavText_home' id=''>
                 Nos expertises
               </Nav.Link>
-              <Nav.Link href="/Apropos" className='Nav_home' id='NavText_home'>
+              <Nav.Link href="/Apropos" className='Nav_home NavText_home' id=''>
                 A propos
               </Nav.Link>
             </Nav>
           </Navbar.Collapse>
         </Container>
       </Navbar>
+
+      {isScrolled ? <NavBarHeader /> : null}
+
 
       <div className="Description_supersenses">
         <div className="container">

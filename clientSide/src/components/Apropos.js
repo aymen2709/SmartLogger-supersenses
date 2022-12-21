@@ -1,8 +1,10 @@
 import imgSensia from "./images/Explainer-videos-for-SAAS.png";
+import Layout from "./Layout/Layout";
 const Apropos = () => {
 
   return (
-    <div id="AproposHeader" className="Apropos">
+    <Layout>
+      <div id="AproposHeader" className="Apropos">
       <div class="text-center" >
         <h1>A Propos Nous</h1>
       </div>
@@ -10,7 +12,7 @@ const Apropos = () => {
         <div class="row">
 
           <div class="col" id="AproposImg">
-            <img src={imgSensia} id="AproposImgSize" />
+            <img src={imgSensia} alt="" id="AproposImgSize" />
           </div>
           <div class="col-sm">
             <h2 id="AproposSuperText">Super Senses</h2>
@@ -29,6 +31,8 @@ const Apropos = () => {
         </div>
       </div>
     </div>
+    </Layout>
+    
   );
 
 }

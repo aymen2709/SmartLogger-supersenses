@@ -12,10 +12,11 @@ import Form from 'react-bootstrap/Form';
 import FloatingLabel from 'react-bootstrap/FloatingLabel';
 
 import axios from "axios";
+import Layout from "../Layout/Layout";
 
 
 function ContactezNous(props) {
- 
+
   const navigate = useNavigate();
 
 
@@ -51,9 +52,9 @@ function ContactezNous(props) {
 
     else if (messageContact === '') newErrors.messageContact =
       'Veuillez saisir votre message';
-    
+
     else if (messageContact.length < 10) newErrors.messageContact = 'Message trop court !'
-    
+
     return newErrors
   }
 
@@ -66,7 +67,7 @@ function ContactezNous(props) {
       setErrors(formErrors)
     } else {
       console.log('Formulaire soumis');
-      
+
       const NewContact = {
         nomPrenomContact: form.nomPrenomContact,
         emailContact: form.emailContact,
@@ -75,113 +76,116 @@ function ContactezNous(props) {
       console.log(NewContact)
       axios.post('http://localhost:3001/ContactezNous',
         NewContact).then((res) => {
-        console.log(res);
-        
+          console.log(res);
+
         });
-      
-        navigate('/')
+
+      navigate('/')
 
     }
 
-   
+
   }
   return (
-    <div className="ContactezNous_container">
-      <Container className="bloc_welcoming_phrases">
+    <Layout>
+      <div className="ContactezNous_container">
+        <Container className="bloc_welcoming_phrases">
 
-        <h3 className="welcoming_phrase">
-          Contactez nous
-        </h3>
+          <h3 className="welcoming_phrase">
+            Contactez nous
+          </h3>
 
-        <h5 className="welcoming_phrase">Nous sommes là pour vous!</h5>
+          <h5 className="welcoming_phrase">Nous sommes là pour vous!</h5>
 
-        <h5 className="welcoming_phrase">Merci de remplir ce formulaire </h5>
+          <h5 className="welcoming_phrase">Merci de remplir ce formulaire </h5>
 
-      </Container>
-
-
-
-
-      <Form className="Contact_form" onSubmit={handleSubmit}>
-
-        <Row>
-          <Col>
-            <Form.Group className="mb-3" controlId="formBasicText" >
-
-              <Form.Label>Nom et Prenom :</Form.Label>
-
-              <Form.Control type="text" className="Contact_input" controlId="nomPrenomContact"
-
-                value={form.nomPrenomContact}
-                onChange={(e) => setField('nomPrenomContact', e.target.value)}
-                isInvalid={!!errors.nomPrenomContact}
-              />
-
-              <Form.Control.Feedback type="invalid">
-                {errors.nomPrenomContact}
-              </Form.Control.Feedback>
-
-            </Form.Group>
-
-          </Col>
-        </Row>
-
-
-        <Row>
-          <Col>
-            <Form.Group className="mb-3" controlId="formBasicEmail" >
-
-              <Form.Label>Adresse email :</Form.Label>
-
-              <Form.Control type="email" className="Contact_input" controlId="emailContact"
-                value={form.emailContact}
-                onChange={(e) => setField('emailContact', e.target.value)}
-                isInvalid={!!errors.emailContact}
-              />
-              <Form.Control.Feedback type="invalid">
-                {errors.emailContact}
-              </Form.Control.Feedback>
-            </Form.Group>
-          </Col>
-
-        </Row>
-
-        <Form.Label>Message :</Form.Label>
-        <FloatingLabel controlId="floatingTextarea2" >
-
-          
-
-          <Form.Control
-            style={{ height: '100px' }} className="Contact_input" controlId="messageContact"
-            as="textarea"
-            type="textarea"
-            value={form.messageContact}
-            onChange={(e) => setField('messageContact', e.target.value)}
-            isInvalid={!!errors.messageContact}
-          />
-          <Form.Control.Feedback type="invalid">
-            {errors.messageContact}
-          </Form.Control.Feedback>
-
-        </FloatingLabel>
+        </Container>
 
 
 
-        <Form.Text className="text-muted" >
-          Super Senses n'utilisera vos informations personnelles que pour fournir le produit
-          ou  le service que vous avez demandé et pour vous contacter avec un contenu connexe
-          susceptible de vous intéresser.
-          Vous pouvez vous désabonner de ces communications à tout moment.<br /> <br />
-        </Form.Text>
 
-        <Button variant="primary" type="submit" id="SeSoumettre_btn"
-          onClick={handleSubmit}>Se soumettre</Button>
+        <Form className="Contact_form" onSubmit={handleSubmit}>
+
+          <Row>
+            <Col>
+              <Form.Group className="mb-3" controlId="formBasicText" >
+
+                <Form.Label>Nom et Prenom :</Form.Label>
+
+                <Form.Control type="text" className="Contact_input" controlId="nomPrenomContact"
+
+                  value={form.nomPrenomContact}
+                  onChange={(e) => setField('nomPrenomContact', e.target.value)}
+                  isInvalid={!!errors.nomPrenomContact}
+                />
+
+                <Form.Control.Feedback type="invalid">
+                  {errors.nomPrenomContact}
+                </Form.Control.Feedback>
+
+              </Form.Group>
+
+            </Col>
+          </Row>
 
 
-      </Form>
+          <Row>
+            <Col>
+              <Form.Group className="mb-3" controlId="formBasicEmail" >
+
+                <Form.Label>Adresse email :</Form.Label>
+
+                <Form.Control type="email" className="Contact_input" controlId="emailContact"
+                  value={form.emailContact}
+                  onChange={(e) => setField('emailContact', e.target.value)}
+                  isInvalid={!!errors.emailContact}
+                />
+                <Form.Control.Feedback type="invalid">
+                  {errors.emailContact}
+                </Form.Control.Feedback>
+              </Form.Group>
+            </Col>
+
+          </Row>
+
+          <Form.Label>Message :</Form.Label>
+          <FloatingLabel controlId="floatingTextarea2" >
 
 
-    </div>
+
+            <Form.Control
+              style={{ height: '100px' }} className="Contact_input" controlId="messageContact"
+              as="textarea"
+              type="textarea"
+              value={form.messageContact}
+              onChange={(e) => setField('messageContact', e.target.value)}
+              isInvalid={!!errors.messageContact}
+            />
+            <Form.Control.Feedback type="invalid">
+              {errors.messageContact}
+            </Form.Control.Feedback>
+
+          </FloatingLabel>
+
+
+
+          <Form.Text className="text-muted" >
+            Super Senses n'utilisera vos informations personnelles que pour fournir le produit
+            ou  le service que vous avez demandé et pour vous contacter avec un contenu connexe
+            susceptible de vous intéresser.
+            Vous pouvez vous désabonner de ces communications à tout moment.<br /> <br />
+          </Form.Text>
+
+          <Button variant="primary" type="submit" id="SeSoumettre_btn"
+            onClick={handleSubmit}>Se soumettre</Button>
+
+
+        </Form>
+
+
+      </div>
+    </Layout>
+
   )
 }
 export default ContactezNous;

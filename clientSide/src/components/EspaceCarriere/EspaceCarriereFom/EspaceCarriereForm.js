@@ -15,17 +15,18 @@ import Form from 'react-bootstrap/Form';
 import axios from "axios";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import { ToastContainer, toast } from 'react-toastify';
+import Layout from "../../Layout/Layout";
 
 
 const notifySuccess = () => {
   toast.success(' Demande envoyée!', {
     position: "bottom-left",
-autoClose: 5000,
-hideProgressBar: false,
-closeOnClick: true,
-pauseOnHover: true,
-draggable: true,
-progress: undefined,
+    autoClose: 5000,
+    hideProgressBar: false,
+    closeOnClick: true,
+    pauseOnHover: true,
+    draggable: true,
+    progress: undefined,
   });
 }
 function EspaceCarriereForm(props) {
@@ -153,165 +154,168 @@ function EspaceCarriereForm(props) {
 
 
   return (
-    <div className="ContactezNous_container">
-      <Container className="bloc_welcoming_phrases">
+    <Layout>
+      <div className="ContactezNous_container">
+        <Container className="bloc_welcoming_phrases">
 
-        <h3 className="welcoming_phrase">
-          Espace carrière
-        </h3>
+          <h3 className="welcoming_phrase">
+            Espace carrière
+          </h3>
 
-        <h5 className="welcoming_phrase">Condidature spontannée</h5>
+          <h5 className="welcoming_phrase">Condidature spontannée</h5>
 
-      </Container>
-
-
+        </Container>
 
 
-      <Form className="Contact_form" onSubmit={handleSubmit}>
 
-        <Row>
-          <ButtonGroup>
-            {radios.map((radio, idx) => (
-              <ToggleButton
-                key={idx}
-                id={`radio-${idx}`}
-                type="radio"
-                variant={idx % 2 ? 'outline-info' : 'outline-info'}
-                name="radio"
-                value={radio.value}
-                checked={radioValue === radio.value}
-                onChange={(e) => setRadioValue(e.currentTarget.value)}>
-                {radio.name}
-              </ToggleButton>
-            ))}
-          </ButtonGroup>
 
-        </Row><br />
+        <Form className="Contact_form" onSubmit={handleSubmit}>
 
-        <Row>
-          <Col>
-            <Form.Group className="mb-3" controlId="formBasicText" >
+          <Row>
+            <ButtonGroup>
+              {radios.map((radio, idx) => (
+                <ToggleButton
+                  key={idx}
+                  id={`radio-${idx}`}
+                  type="radio"
+                  variant={idx % 2 ? 'outline-info' : 'outline-info'}
+                  name="radio"
+                  value={radio.value}
+                  checked={radioValue === radio.value}
+                  onChange={(e) => setRadioValue(e.currentTarget.value)}>
+                  {radio.name}
+                </ToggleButton>
+              ))}
+            </ButtonGroup>
 
-              <Form.Label>Nom et Prenom :</Form.Label>
+          </Row><br />
 
-              <Form.Control type="text" className="Contact_input" controlId="nomPrenomCandidat"
-                required
-                value={form.nomPrenomCandidat}
-                onChange={(e) => setField('nomPrenomCandidat', e.target.value)}
-                isInvalid={!!errors.nomPrenomCandidat}
-              />
+          <Row>
+            <Col>
+              <Form.Group className="mb-3" controlId="formBasicText" >
+
+                <Form.Label>Nom et Prenom :</Form.Label>
+
+                <Form.Control type="text" className="Contact_input" controlId="nomPrenomCandidat"
+                  required
+                  value={form.nomPrenomCandidat}
+                  onChange={(e) => setField('nomPrenomCandidat', e.target.value)}
+                  isInvalid={!!errors.nomPrenomCandidat}
+                />
+
+                <Form.Control.Feedback type="invalid">
+                  {errors.nomPrenomCandidat}
+                </Form.Control.Feedback>
+
+              </Form.Group>
+
+            </Col>
+
+            <Col>
+              <Form.Group className="mb-3" controlId="formBasicEmail" >
+
+                <Form.Label>Adresse email :</Form.Label>
+
+                <Form.Control type="email" className="Contact_input" controlId="emailCandidat"
+
+                  value={form.emailCandidat}
+                  onChange={(e) => setField('emailCandidat', e.target.value)}
+                  isInvalid={!!errors.emailCandidat}
+                  required />
+                <Form.Control.Feedback type="invalid">
+                  {errors.emailCandidat}
+                </Form.Control.Feedback>
+              </Form.Group>
+            </Col>
+
+          </Row>
+
+          <Row>
+            <Col>
+              <Form.Group className="mb-3" controlId="formBasicText" >
+
+                <Form.Label>Numéro du telephone:</Form.Label>
+
+                <Form.Control type="telephone" className="Contact_input" controlId="numTelephoneCandidat"
+                  value={form.numTelephoneCandidat}
+                  onChange={(e) => setField('numTelephoneCandidat', e.target.value)}
+                  isInvalid={!!errors.numTelephoneCandidat}
+                  required />
+
+                <Form.Control.Feedback type="invalid">
+                  {errors.numTelephoneCandidat}
+                </Form.Control.Feedback>
+
+              </Form.Group>
+            </Col>
+
+            <Col>
+              <Form.Label>Specialité:</Form.Label><br />
+
+              <select id="SpecialiteCandidature"
+                value={form.selectSpecialite}
+                onChange={(e) => setField('selectSpecialite', e.target.value)}
+                isInvalid={!!errors.selectSpecialite}
+                required >
+                <option></option>
+                <option >Web development</option>
+                <option >Mobile developement</option>
+                <option >IOT</option>
+                <option >AI</option>
+              </select>
 
               <Form.Control.Feedback type="invalid">
-                {errors.nomPrenomCandidat}
+                {errors.selectSpecialite}
               </Form.Control.Feedback>
+            </Col>
 
-            </Form.Group>
+          </Row>
+          <Row>
+            <Col>
+              <Form.Group className="mb-3" controlId="formBasicText" >
+                <Form.Label>Curriculum Vitae :</Form.Label>
+                <Form.Control type="file" className="Contact_input" controlId="CVCandidat"
+                  value={form.CVCandidat}
+                  onChange={(e) => setField('CVCandidat', e.target.value)}
+                  isInvalid={!!errors.CVCandidat} accept=".pdf" required />
+                <Form.Control.Feedback type="invalid">
+                  {errors.CVCandidat}
+                </Form.Control.Feedback>
+              </Form.Group>
+            </Col>
+          </Row>
 
-          </Col>
-
-          <Col>
-            <Form.Group className="mb-3" controlId="formBasicEmail" >
-
-              <Form.Label>Adresse email :</Form.Label>
-
-              <Form.Control type="email" className="Contact_input" controlId="emailCandidat"
-
-                value={form.emailCandidat}
-                onChange={(e) => setField('emailCandidat', e.target.value)}
-                isInvalid={!!errors.emailCandidat}
-                required />
-              <Form.Control.Feedback type="invalid">
-                {errors.emailCandidat}
-              </Form.Control.Feedback>
-            </Form.Group>
-          </Col>
-
-        </Row>
-
-        <Row>
-          <Col>
-            <Form.Group className="mb-3" controlId="formBasicText" >
-
-              <Form.Label>Numéro du telephone:</Form.Label>
-
-              <Form.Control type="telephone" className="Contact_input" controlId="numTelephoneCandidat"
-                value={form.numTelephoneCandidat}
-                onChange={(e) => setField('numTelephoneCandidat', e.target.value)}
-                isInvalid={!!errors.numTelephoneCandidat}
-                required />
-
-              <Form.Control.Feedback type="invalid">
-                {errors.numTelephoneCandidat}
-              </Form.Control.Feedback>
-
-            </Form.Group>
-          </Col>
-
-          <Col>
-            <Form.Label>Specialité:</Form.Label><br />
-
-            <select id="SpecialiteCandidature"
-              value={form.selectSpecialite}
-              onChange={(e) => setField('selectSpecialite', e.target.value)}
-              isInvalid={!!errors.selectSpecialite}
-              required >
-              <option></option>
-              <option >Web development</option>
-              <option >Mobile developement</option>
-              <option >IOT</option>
-              <option >AI</option>
-            </select>
-
-            <Form.Control.Feedback type="invalid">
-              {errors.selectSpecialite}
-            </Form.Control.Feedback>
-          </Col>
-
-        </Row>
-        <Row>
-          <Col>
-            <Form.Group className="mb-3" controlId="formBasicText" >
-              <Form.Label>Curriculum Vitae :</Form.Label>
-              <Form.Control type="file" className="Contact_input" controlId="CVCandidat"
-                value={form.CVCandidat}
-                onChange={(e) => setField('CVCandidat', e.target.value)}
-                isInvalid={!!errors.CVCandidat} accept=".pdf" required />
-              <Form.Control.Feedback type="invalid">
-                {errors.CVCandidat}
-              </Form.Control.Feedback>
-            </Form.Group>
-          </Col>
-        </Row>
-
-        <Row>
-          <Col>
-            <Form.Group className="mb-3" controlId="formBasicText" >
-              <Form.Label>Lettre de motivation :</Form.Label>
-              <Form.Control type="file" className="Contact_input" controlId="LettreMotivationCandidat"
-                value={form.LettreMotivationCandidat}
-                onChange={(e) => setField('LettreMotivationCandidat', e.target.value)}
-                isInvalid={!!errors.LettreMotivationCandidat} accept=".pdf" required />
-              <Form.Control.Feedback type="invalid">
-                {errors.LettreMotivationCandidat}
-              </Form.Control.Feedback>
-            </Form.Group>
-          </Col>
-        </Row>
+          <Row>
+            <Col>
+              <Form.Group className="mb-3" controlId="formBasicText" >
+                <Form.Label>Lettre de motivation :</Form.Label>
+                <Form.Control type="file" className="Contact_input" controlId="LettreMotivationCandidat"
+                  value={form.LettreMotivationCandidat}
+                  onChange={(e) => setField('LettreMotivationCandidat', e.target.value)}
+                  isInvalid={!!errors.LettreMotivationCandidat} accept=".pdf" required />
+                <Form.Control.Feedback type="invalid">
+                  {errors.LettreMotivationCandidat}
+                </Form.Control.Feedback>
+              </Form.Group>
+            </Col>
+          </Row>
 
 
-        <Form.Text className="text-muted" >
-          Super Senses n'utilisera vos informations personnelles que pour fournir le produit
-          ou  le service que vous avez demandé et pour vous contacter avec un contenu connexe
-          susceptible de vous intéresser.
-          Vous pouvez vous désabonner de ces communications à tout moment.<br /> <br />
-        </Form.Text>
+          <Form.Text className="text-muted" >
+            Super Senses n'utilisera vos informations personnelles que pour fournir le produit
+            ou  le service que vous avez demandé et pour vous contacter avec un contenu connexe
+            susceptible de vous intéresser.
+            Vous pouvez vous désabonner de ces communications à tout moment.<br /> <br />
+          </Form.Text>
 
-        <Button variant="primary" type="submit" id="SeSoumettre_btn"
-          onClick={handleSubmit}>Postulez</Button>
+          <Button variant="primary" type="submit" id="SeSoumettre_btn"
+            onClick={handleSubmit}>Postulez</Button>
 
 
-      </Form>
-    </div >
+        </Form>
+      </div >
+    </Layout>
+
   )
 }
 export default EspaceCarriereForm;

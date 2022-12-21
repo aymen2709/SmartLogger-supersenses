@@ -16,10 +16,6 @@
 /*********screen between 1024px and 1450px *************/
 @media only screen and (min-width: 1024px) and (max-width:1450px) {
 
-  .Apropos {
-    margin-top: 6% !important;
-  }
-
   .logo-footer {
     width: 100%;
     max-width: 170px;
@@ -94,7 +90,7 @@
 /****** for screen between 980 and 1099 *******/
 @media only screen and (min-width: 980px) and (max-width:1099px) {
   .logo_supersenses {
-    width: 107px;
+    width: auto;
     height: 76.42px;
     margin-left: 15px !important;
     margin-right: 5px;
@@ -308,18 +304,6 @@
     margin-left: -65% !important;
   }
 
-
-  /*==========*/
-  /**navbar **/
-  .nav-header {
-    z-index: 12;
-    position: fixed;
-    background-color: white;
-    width: 100% !important;
-    margin-top: -25px !important;
-    padding-right: 25px !important;
-  }
-
   /*==========**/
   /**home Interface**/
   .description_img {
@@ -356,7 +340,6 @@
   /**================**/
   /**Hodhod Interface **/
   .NosServices_Container {
-    margin-top: 25px !important;
     margin-bottom: 100px;
     width: 100%;
   }
@@ -632,10 +615,6 @@
     width: 315px !important;
   }
 
-  .Apropos {
-    margin-top: 80px !important;
-  }
-
   /*==================*/
   /** espace carriere **/
   .ContactezNous_container {
@@ -846,10 +825,6 @@
   margin-left: 26%;
 }
 
-.NosSolution {
-  margin-top: 5%;
-}
-
 #TitleHodhod {
   margin-top: 4%;
 
@@ -873,9 +848,7 @@
   border-radius: 20px;
 }
 
-.Apropos {
-  margin-top: 5%;
-}
+
 
 #AproposParag {
   text-align: left;
@@ -1395,10 +1368,15 @@
 .nav-header {
   z-index: 12;
   position: fixed;
+  top: 0;
   background-color: white;
   width: 100%;
-  margin-top: -85px;
+  border-bottom: 1px solid rgb(231, 230, 230);
+}
 
+.nav-header .scrolled {
+  transition: 0.5s ease;
+  height: 40px;
 }
 
 #bg_img_header {
@@ -1444,11 +1422,13 @@
 }
 
 .logo_supersenses {
-  width: 107px;
+  width: auto;
   height: 76.42px;
   margin-left: 10px;
   margin-right: 5px;
 }
+
+
 
 #languageIcon {
   display: inline;
@@ -1870,7 +1850,10 @@
   height: auto;
   width: 100%;
   position: absolute;
-  top:-100%; left:0; right: 0; bottom:-100%;
+  top: -100%;
+  left: 0;
+  right: 0;
+  bottom: -100%;
   margin: auto;
 }
 
@@ -1896,6 +1879,20 @@
     height: 226px;
   }
 }
+
+@media(max-width: 500px) {
+  .portfolio-img-container {
+    height: 180px;
+  }
+}
+
+@media(max-width: 400px) {
+  .portfolio-img-container {
+    height: 150px;
+  }
+}
+
+
 
 @media(max-width: 490px) {
   .portfolio-img:hover {
@@ -1926,6 +1923,10 @@
   width: 100px !important;
 }
 
+.Nav_home {
+  color: white;
+}
+
 #dropdown_Solution,
 .Nav_home {
   color: white;
@@ -1935,9 +1936,9 @@
 
 }
 
-#NavText_home {
-  color: white;
-}
+/* .NavText_home {
+  color: white !important;
+} */
 
 /*************************/
 
@@ -2022,7 +2023,6 @@
 }
 
 .NosServices_Container {
-  margin-top: 80px;
   margin-bottom: 100px;
   width: 100%;
 
@@ -2234,9 +2234,6 @@
 
 
 /*****************************NosOffres**************************/
-.NosOffres {
-  margin-top: 5%;
-}
 
 #boxF {
   margin-top: 6%;
@@ -2262,4 +2259,19 @@
 
 #infoOffre {
   width: 180%;
+}
+
+/******************** Privacy Policy *********************/
+.privacy-policy-box {
+  background: #FFF;
+  border-radius: 10px;
+  padding: 30px;
+  margin: 30px 0px;
+  box-shadow: 0px 2px 12px rgba(0, 0, 0, 0.274);
+  width: 100%;
+}
+
+.privacy-policy-box .title {
+  color: #187597;
+  margin-bottom: 30px;
 }
