@@ -5,16 +5,16 @@ const Apropos = () => {
   return (
     <Layout>
       <div id="AproposHeader" className="Apropos">
-      <div class="text-center" >
+      <div className="text-center" >
         <h1>A Propos Nous</h1>
       </div>
-      <div class="container" id="AproposContent">
-        <div class="row">
+      <div className="container" id="AproposContent">
+        <div className="row">
 
-          <div class="col" id="AproposImg">
+          <div className="col" id="AproposImg">
             <img src={imgSensia} alt="" id="AproposImgSize" />
           </div>
-          <div class="col-sm">
+          <div className="col-sm">
             <h2 id="AproposSuperText">Super Senses</h2>
             <p id="AproposParag">
               une startup Tunisienne dévoilée par une équipe d’ingénieurs multidisciplinaires.<br></br>

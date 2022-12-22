@@ -13,16 +13,16 @@ const NosSolutionHodhod = () => {
 
     <div>
       <div className="container NosSolutionPa">
-        <div class="col">
-          <div class="row">
-            <img id="hodhodImage" class="img-thumbnail shadow " src={hodhod} alt="hodhod image " />
+        <div className="col">
+          <div className="row">
+            <img id="hodhodImage" className="img-thumbnail shadow " src={hodhod} alt="hodhod image " />
           </div>
-          <div class="row">
+          <div className="row">
             <p id="hodhodStatement"><br></br>Devenez acteurs dans votre commune</p><br></br><br></br>
-            <div class="col">
+            <div className="col">
               <img id="googlePlay" src={googlePlay} alt="google store" />
             </div>
-            {/* <div class="col">
+            {/* <div className="col">
               <img id="appStore" src={applestore} alt="apple store" />
             </div> */}
           </div>

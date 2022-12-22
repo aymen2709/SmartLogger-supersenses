@@ -9,22 +9,23 @@ import { LinkContainer } from "react-router-bootstrap";
 import fontawesome from '@fortawesome/fontawesome'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCheckSquare, faCoffee } from '@fortawesome/fontawesome-free-solid';
-import NavDropdown from 'react-bootstrap/NavDropdown';
 import { useEffect } from 'react';
 import { useState } from 'react';
 import NavBarHeader from "../NavBarsHeaderFooter/NavBarHeader";
 import ButtonGroup from 'react-bootstrap/ButtonGroup';
 import Dropdown from 'react-bootstrap/Dropdown';
 import { HashLink } from 'react-router-hash-link';
+import { useRef } from "react";
 
 function HomeInterface() {
 
+  // ---------------------------------
+  // Detect when we scrolled down
+  // ---------------------------------
   const [isScrolled, setIsScrolled] = useState(false);
-
   const onScrollEvent = () => {
     window.scrollY >= 100 ? setIsScrolled(true) : setIsScrolled(false);
   }
-
   useEffect(() => {
     window.addEventListener('scroll', onScrollEvent);
     return () => {
@@ -32,44 +33,85 @@ function HomeInterface() {
     }
   }, []);
 
+  // ------------------------------
+  // Prevent scroll when navbar is 
+  // expanded in mobile devices
+  // ------------------------------
+  const [expanded, setExpanded] = useState(false);
+  useEffect(() => {
+    if (expanded) {
+      document.body.style.overflow = 'hidden';
+    }
+    if (!expanded) {
+      document.body.style.overflow = 'unset';
+    }
+  }, [expanded]);
+
+
+  // -----------------------------
+  // Hide NavBar if the user click
+  // outside EXPANDED navbar
+  // -----------------------------
+  const navBarRef = useRef(null);
+  useEffect(() => {
+    function handleClickOutside(event) {
+      if (expanded) {
+        if (navBarRef.current && !navBarRef.current.contains(event.target)) {
+          // Clicked outside
+          setExpanded(false);
+        }
+      }
+    }
+    document.addEventListener("mousedown", handleClickOutside);
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside);
+    };
+  }, [navBarRef, expanded]);
+
+
+
   fontawesome.library.add(faCheckSquare, faCoffee);
 
   return (
     <div className="bg-img" id="bg_img_header">
 
-      <Navbar bg="transparent" expand="lg" id="navbarTestIcons">
+      <Navbar ref={navBarRef} bg="transparent" expand="lg" id="navbarTestIcons" expanded={expanded}>
         <Container>
           <Navbar.Brand href="/">
             <div className="bgTestImg"></div>
           </Navbar.Brand>
-          <Navbar.Toggle aria-controls="basic-navbar-nav" >
+          <Navbar.Toggle aria-controls="basic-navbar-nav" onClick={() => setExpanded(expanded ? false : true)}>
             <span> <FontAwesomeIcon icon="bars" color="white" size="lg" /> </span>
           </Navbar.Toggle>
           <Navbar.Collapse id="basic-navbar-nav">
             <Nav className="ms-auto" id="HomeNav">
-              <Nav.Link className='Nav_home NavText_home' id='' href="/">Accueil</Nav.Link>
-              {/* <NavDropdown title="Nos Solutions" id="dropdown_Solution">
-                <NavDropdown.Item href="/Hodhod">Hodhod</NavDropdown.Item>
-                <NavDropdown.Item href="/SensesIA">SensesIA</NavDropdown.Item>
-              </NavDropdown> */}
+              <Nav.Link className='Nav_home NavText_home' id='' href="/" onClick={() => setExpanded(false)}>
+                Accueil
+              </Nav.Link>
               <div className='btnNosSolution'>
                 <Dropdown as={ButtonGroup}>
-                  <Button variant='transparent' >
-                    <HashLink style={{ textDecoration: "none", color: "black" }} smooth to="/#no-solutions">
-                      <h6 className="NavText_home">Nos Solutions</h6>
+                  <Button variant='transparent' className="dropdown-btn" >
+                    <HashLink className="NavText_home" style={{ textDecoration: "none" }} smooth to="/#no-solutions"
+                      onClick={() => setExpanded(false)}>
+                      Nos Solutions
                     </HashLink>
                   </Button>
-                  <Dropdown.Toggle split variant="transparent" size="sm" id="dropdown-split-basic" />
-                  <Dropdown.Menu size="sm">
-                    <Dropdown.Item href="/Hodhod"><h6 className="NavText_home">Hodhod</h6></Dropdown.Item>
-                    <Dropdown.Item href="/SensesIA"><h6 className="NavText_home">SensesIA</h6></Dropdown.Item>
+                  <Dropdown.Toggle className="NavText_home" split variant="transparent" size="sm"
+                    id="dropdown-split-basic" />
+                  <Dropdown.Menu size="sm" className="home-nav-dropdown">
+                    <Dropdown.Item onClick={() => setExpanded(false)} className="dropdown-item-home" href="/Hodhod">
+                      Hodhod
+                    </Dropdown.Item>
+                    <Dropdown.Item onClick={() => setExpanded(false)} className="dropdown-item-home" href="/SensesIA">
+                      SensesIA
+                    </Dropdown.Item>
                   </Dropdown.Menu>
                 </Dropdown>
               </div>
-              <Nav.Link href="/NosExpertises" className='Nav_home NavText_home' id=''>
+              <Nav.Link onClick={() => setExpanded(false)} href="/NosExpertises" className='Nav_home NavText_home'>
                 Nos expertises
               </Nav.Link>
-              <Nav.Link href="/Apropos" className='Nav_home NavText_home' id=''>
+              <Nav.Link onClick={() => setExpanded(false)} href="/Apropos" className='Nav_home NavText_home' id=''>
                 A propos
               </Nav.Link>
             </Nav>

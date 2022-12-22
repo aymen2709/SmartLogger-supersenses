@@ -3,9 +3,9 @@ const EspaceCarriereBody = () => {
 
     return (
         <div className="espCarr" >
-            <div class="row">
-                <div class="col">
-                    <div class="img-thumbnail shadow " id="EspaceCarriereBody">
+            <div className="row">
+                <div className="col">
+                    <div className="img-thumbnail shadow " id="EspaceCarriereBody">
                         bonjour
                     </div>
 
@@ -13,13 +13,13 @@ const EspaceCarriereBody = () => {
                 <div>
                 </div>
             </div>
-            <br></br><button type="button" class="btn btn-info justify-content-center" style={{ width: "20%", marginLeft: "66.8%", marginTop: "3%", marginBottom: "1%" }}>Info</button>
-            <div class="row">
-                <div class="col">
-                    <button type="button" class="btn btn-outline-secondary" id="CarriereButtomSauv"><i class="bi bi-bookmark-fill"></i> Sauvegarder</button>
+            <br></br><button type="button" className="btn btn-info justify-content-center" style={{ width: "20%", marginLeft: "66.8%", marginTop: "3%", marginBottom: "1%" }}>Info</button>
+            <div className="row">
+                <div className="col">
+                    <button type="button" className="btn btn-outline-secondary" id="CarriereButtomSauv"><i className="bi bi-bookmark-fill"></i> Sauvegarder</button>
                 </div>
-                <div class="col">
-                    <button type="button" class="btn btn-outline-secondary" id="CarriereButtomPart" ><i class="bi bi-box-arrow-up-right"></i>  Partager</button>
+                <div className="col">
+                    <button type="button" className="btn btn-outline-secondary" id="CarriereButtomPart" ><i className="bi bi-box-arrow-up-right"></i>  Partager</button>
                 </div>
             </div>
 

@@ -60,10 +60,10 @@ function NosExpertises() {
                 qui nous permet d’identifier et de booster la transformation digitale.<br /><br />
                 Notre prestation de service se base sur :<br /><br />
                 <ul className="digitalOptions">
-                  <li class="bi bi-check2-circle" style={{ listStyleType: "none" }}> Booster la stratégie digitale de l’entreprise.</li>
-                  <li class="bi bi-check2-circle" style={{ listStyleType: "none" }}> Fournir des outils d’aide aux décisions fiables et intelligentes.</li>
-                  <li class="bi bi-check2-circle" style={{ listStyleType: "none" }}> Créer des plateformes interactives intelligentes en temps réelles.</li>
-                  <li class="bi bi-check2-circle" style={{ listStyleType: "none" }}> La mise en œuvre d’applications web et mobile mobilisant toutes les
+                  <li className="bi bi-check2-circle" style={{ listStyleType: "none" }}> Booster la stratégie digitale de l’entreprise.</li>
+                  <li className="bi bi-check2-circle" style={{ listStyleType: "none" }}> Fournir des outils d’aide aux décisions fiables et intelligentes.</li>
+                  <li className="bi bi-check2-circle" style={{ listStyleType: "none" }}> Créer des plateformes interactives intelligentes en temps réelles.</li>
+                  <li className="bi bi-check2-circle" style={{ listStyleType: "none" }}> La mise en œuvre d’applications web et mobile mobilisant toutes les
                     ouvelles approches méthodologiques et technologiques.</li>
                 </ul>
               </p>

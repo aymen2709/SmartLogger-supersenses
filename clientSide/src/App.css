@@ -1,3 +1,4 @@
+
 @font-face {
   font-family: "CaviarDreams";
   src: local("CaviarDreams"),
@@ -1467,18 +1468,33 @@
     box-shadow: 0px 3px 6px #888992;
     border-radius: 21px;
     backdrop-filter: blur(6px);
-
+    padding: 20px 0px;
   }
 
   #basic-navbar-nav .Nav_home,
   #basic-navbar-nav #dropdown_Solution,
-  #basic-navbar-nav .dropdown-item {
+  #basic-navbar-nav .dropdown-item,
+  #basic-navbar-nav .btnNosSolution,
+  #basic-navbar-nav .Nav_item {
     color: black;
-    text-align: center;
-    width: 100%;
-    padding: 1.5rem 0;
+    padding: 1rem 0;
     margin-right: 0px;
-    margin-left: 0px;
+    margin-left: 26px;
+  }
+
+  #basic-navbar-nav .dropdown-btn {
+    padding-left: 0px;
+    padding-top: 0px;
+    padding-bottom: 0px;
+  }
+
+  #basic-navbar-nav .btnNosSolution {
+    position: relative;
+  }
+
+  #basic-navbar-nav .home-nav-dropdown {
+    position: absolute;
+    left: 100px;
   }
 }
 
@@ -1924,21 +1940,33 @@
 }
 
 .Nav_home {
-  color: white;
+  color: white !important;
 }
 
 #dropdown_Solution,
 .Nav_home {
-  color: white;
+  color: white !important;
   font-size: 16px;
   margin-right: 20px;
   margin-left: 20px;
-
 }
 
-/* .NavText_home {
+.NavText_home {
   color: white !important;
-} */
+  font-weight: 600;
+}
+
+.dropdown-item-home {
+  padding-top: 10px !important;
+  padding-bottom: 10px !important;
+  font-weight: 600;
+}
+
+@media(max-width: 991px) {
+  .NavText_home {
+    color: black !important;
+  }
+}
 
 /*************************/
 

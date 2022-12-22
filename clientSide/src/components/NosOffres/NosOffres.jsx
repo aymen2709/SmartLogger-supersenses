@@ -225,8 +225,8 @@ const NosOffres = () => {
                                 <div className="col" id="boxoffres">
                                     <div className='row '>
                                         <h6 className='text-center col'>Développeur WEB Full Stack Symfony 3/4 (H/F)</h6>
-                                        <button type="button" class="btn btn-outline-dark" id="buttonOffre">
-                                            <Link to="/InformationOffre" class="btn-outline-dark"
+                                        <button type="button" className="btn btn-outline-dark" id="buttonOffre">
+                                            <Link to="/InformationOffre" className="btn-outline-dark"
                                                 style={{ textDecoration: "none" }}>voir l'offre
                                             </Link>
                                         </button>
@@ -252,7 +252,7 @@ const NosOffres = () => {
                                 <div className="col" id="boxoffres">
                                     <div className='row '>
                                         <h6 className='text-center col'>Développeur WEB Full Stack Symfony 3/4 (H/F)</h6>
-                                        <button type="button" class="btn btn-outline-dark" id="buttonOffre">voir l'offre</button>
+                                        <button type="button" className="btn btn-outline-dark" id="buttonOffre">voir l'offre</button>
                                     </div>
 
                                     <div className='row' id="infoOffre">
@@ -275,7 +275,7 @@ const NosOffres = () => {
                                 <div className="col" id="boxoffres">
                                     <div className='row '>
                                         <h6 className='text-center col'>Développeur WEB Full Stack Symfony 3/4 (H/F)</h6>
-                                        <button type="button" class="btn btn-outline-dark" id="buttonOffre">voir l'offre</button>
+                                        <button type="button" className="btn btn-outline-dark" id="buttonOffre">voir l'offre</button>
                                     </div>
 
                                     <div className='row' id="infoOffre">
@@ -298,7 +298,7 @@ const NosOffres = () => {
                                 <div className="col" id="boxoffres">
                                     <div className='row '>
                                         <h6 className='text-center col'>Développeur WEB Full Stack Symfony 3/4 (H/F)</h6>
-                                        <button type="button" class="btn btn-outline-dark" id="buttonOffre">voir l'offre</button>
+                                        <button type="button" className="btn btn-outline-dark" id="buttonOffre">voir l'offre</button>
                                     </div>
 
                                     <div className='row' id="infoOffre">

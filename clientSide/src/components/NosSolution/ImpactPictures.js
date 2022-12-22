@@ -44,15 +44,15 @@ const ImpactPictures = () => {
   };
   return (
     <div className='PictureContent'>
-      <h1 class="d-flex justify-content-center">Les Impacts de Hodhod</h1>
+      <h1 className="d-flex justify-content-center">Les Impacts de Hodhod</h1>
       <Slider {...settings}>
-        <div class="img-thumbnail shadow " style={{ width: "400px", height: "120px" }}>
+        <div className="img-thumbnail shadow " style={{ width: "400px", height: "120px" }}>
           <img src={img1} />
         </div>
-        <div class="img-thumbnail shadow " id="CarouselBorder" >
+        <div className="img-thumbnail shadow " id="CarouselBorder" >
           <img src={img1} />
         </div>
-        <div class="img-thumbnail shadow " id="CarouselBorder" >
+        <div className="img-thumbnail shadow " id="CarouselBorder" >
           <img src={img2} />
         </div>
         <div >

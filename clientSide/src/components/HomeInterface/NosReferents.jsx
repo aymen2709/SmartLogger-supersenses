@@ -25,7 +25,7 @@ function NosReferents(props) {
          </Row>
       </Container>
       
-      <div class="d-flex justify-content-center">
+      <div className="d-flex justify-content-center">
         <img src={smartLogger} className="ref-img" alt=''/>
         <img src={novationCity} className="ref-img" alt=''/>
       </div>
