@@ -6,13 +6,13 @@ import hodhod2 from "./images/senses_IA.png";
 import iconMsg from "./images/Group 14382.png";
 import ccd4SarraImg from './images/portfolio/ccd4_sarra.jpg';
 import ccd4GroupImg from './images/portfolio/ccd4_group.jpg';
-import municipality1Img from './images/portfolio/municipality_1.jpg';
-import municipality2Img from './images/portfolio/municipality_2.jpg';
+//import municipality1Img from './images/portfolio/municipality_1.jpg';
+//import municipality2Img from './images/portfolio/municipality_2.jpg';
 import safranImg from './images/portfolio/safran.jpg';
-import sidiBoualiImg from './images/portfolio/sidi_bouali.jpg';
+//import sidiBoualiImg from './images/portfolio/sidi_bouali.jpg';
 import labelStartup from './images/portfolio/label_startup.jpg';
 import labelStartupGroup from './images/portfolio/label_startup_group.jpg';
-import municipality3Img from './images/portfolio/municipality_3.jpeg';
+//import municipality3Img from './images/portfolio/municipality_3.jpeg';
 
 import { Link } from 'react-router-dom';
 
@@ -142,16 +142,23 @@ const NosValeur = () => {
           <div className='col-lg-4 mt-5 text-center'>
             <div className='portfolio-img-container'>
               <span className='helper-portfolio'></span>
-              <img src={municipality1Img} alt='Municipalité 1' className="portfolio-img img-responsive" />
+              <img src={labelStartup} alt="Obtention Label Startup Tunisie" className='portfolio-img img-responsive' />
             </div>
           </div>
 
-          <div className='col-lg-4 mt-5 text-center'>
+          {/* <div className='col-lg-4 mt-5 text-center'>
+            <div className='portfolio-img-container'>
+              <span className='helper-portfolio'></span>
+              <img src={municipality1Img} alt='Municipalité 1' className="portfolio-img img-responsive" />
+            </div>
+          </div> */}
+
+          {/* <div className='col-lg-4 mt-5 text-center'>
             <div className='portfolio-img-container'>
               <span className='helper-portfolio'></span>
               <img src={municipality2Img} alt='Municipalité 2' className='portfolio-img img-responsive' />
             </div>
-          </div>
+          </div> */}
 
           <div className='col-lg-4 mt-5 text-center'>
             <div className='portfolio-img-container'>
@@ -161,24 +168,17 @@ const NosValeur = () => {
             </div>
           </div>
 
-          <div className='col-lg-4 mt-5 text-center'>
+          {/* <div className='col-lg-4 mt-5 text-center'>
             <div className='portfolio-img-container'>
               <span className='helper-portfolio'></span>
               <img src={sidiBoualiImg} alt="Municipalité de Sidi Bou Ali" className='portfolio-img img-responsive' />
             </div>
-          </div>
+          </div> */}
 
-          <div className='col-lg-4 mt-5 text-center'>
+          <div className='offset-lg-2 col-lg-4 mt-5 text-center'>
             <div className='portfolio-img-container'>
               <span className='helper-portfolio'></span>
               <img src={safranImg} alt="CTO Aymen Abid Boukadida chez Safran" className='portfolio-img img-responsive' />
-            </div>
-          </div>
-
-          <div className='col-lg-4 mt-5 text-center'>
-            <div className='portfolio-img-container'>
-              <span className='helper-portfolio'></span>
-              <img src={labelStartup} alt="Obtention Label Startup Tunisie" className='portfolio-img img-responsive' />
             </div>
           </div>
 
@@ -189,12 +189,12 @@ const NosValeur = () => {
             </div>
           </div>
 
-          <div className='col-lg-4 mt-5 text-center'>
+          {/* <div className='col-lg-4 mt-5 text-center'>
             <div className='portfolio-img-container'>
               <span className='helper-portfolio'></span>
               <img src={municipality3Img} alt="Municipalité 3" className='portfolio-img img-responsive' />
             </div>
-          </div>
+          </div> */}
 
         </div>
       </div>

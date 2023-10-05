@@ -73,7 +73,7 @@ function NosExpertises() {
         <div className="AI_slogan" id="backgroundimg">
           <p>
             Notre vision est de crée un outil technologique<br />
-            d’aide à la décision capable d’ajouter un 6ieme sens utilisant l’intelligence artificielle.<br />
+            d’aide à la décision capable d’ajouter un sixième sens utilisant l’intelligence artificielle.<br />
             Nous créons de l’intelligence artificielle sur mesure.</p>
         </div>
         <IACestQuoi />
