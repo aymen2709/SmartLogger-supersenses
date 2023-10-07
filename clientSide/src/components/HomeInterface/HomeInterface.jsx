@@ -99,9 +99,9 @@ function HomeInterface() {
                   <Dropdown.Toggle className="NavText_home" split variant="transparent" size="sm"
                     id="dropdown-split-basic" />
                   <Dropdown.Menu size="sm" className="home-nav-dropdown">
-                    <Dropdown.Item onClick={() => setExpanded(false)} className="dropdown-item-home" href="/Hodhod">
+                    {/* <Dropdown.Item onClick={() => setExpanded(false)} className="dropdown-item-home" href="/Hodhod">
                       Hodhod
-                    </Dropdown.Item>
+                    </Dropdown.Item> */}
                     <Dropdown.Item onClick={() => setExpanded(false)} className="dropdown-item-home" href="/SensesIA">
                       SensesIA
                     </Dropdown.Item>

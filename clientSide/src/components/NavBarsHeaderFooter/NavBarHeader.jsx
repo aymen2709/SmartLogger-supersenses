@@ -95,9 +95,9 @@ function NavBarHeader() {
                   </Button>
                   <Dropdown.Toggle split variant="transparent" size="sm" id="dropdown-split-basic" />
                   <Dropdown.Menu size="sm" className='home-nav-dropdown'>
-                    <Dropdown.Item className="dropdown-item-home" href="/Hodhod" onClick={() => setExpanded(false)}>
+                    {/* <Dropdown.Item className="dropdown-item-home" href="/Hodhod" onClick={() => setExpanded(false)}>
                       Hodhod
-                    </Dropdown.Item>
+                    </Dropdown.Item> */}
                     <Dropdown.Item className="dropdown-item-home" href="/SensesIA" onClick={() => setExpanded(false)}>
                       SensesIA
                     </Dropdown.Item>

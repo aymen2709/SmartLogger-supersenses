@@ -31,7 +31,7 @@ function App() {
                         <Route path="/NosExpertises" element={<> <NosExpertises /></>} />
                         {/* <Route path="/NosOffres" element={<> <NosOffres /></>} /> */}
                         <Route path="/ContactezNous" element={<><ContactezNous /></>} />
-                        <Route path="/Hodhod" element={<> <NosSolution /></>} />
+                        {/* <Route path="/Hodhod" element={<> <NosSolution /></>} /> */}
                         <Route path="/Apropos" element={<><Apropos /></>} />
                         <Route path="/EspaceCarriere" element={<> < EspaceCarriereForm /></>} />
                         <Route path="/InformationOffre" element={<> <EspaceCarriereOffre /></>} />

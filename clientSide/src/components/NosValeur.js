@@ -86,7 +86,7 @@ const NosValeur = () => {
       </div>
       <div className='container solutions-container'>
         <div className='row'>
-          <div className='col-md-6'>
+          {/* <div className='col-md-6'>
             <Link className='link-to-solution' to="/Hodhod">
               <img src={hodhod1} className="solution-img img-responsive" id="hodhod1" alt='Hodhod' />
               <div className='solution-description-container'>
@@ -95,8 +95,8 @@ const NosValeur = () => {
               </div>
               <img src={iconMsg} alt='message' className='solution-icon'></img>
             </Link>
-          </div>
-          <div className='col-md-6'>
+          </div> */}
+          <div className='offset-md-3 col-md-6'>
             <Link className='link-to-solution' to="/SensesIA">
               <img src={hodhod2} id="hodhod1" className='solution-img img-responsive' alt='Sensea' />
               <div className='solution-description-container'>

@@ -12,7 +12,7 @@ const NosSolution = () => {
                 </div>
                 <div >
                     <NosSolutionPa />
-                    <NosSolutionHodhod />
+                    {/* <NosSolutionHodhod /> */}
                 </div>
 
             </div>
